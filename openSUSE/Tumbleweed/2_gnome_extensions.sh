@@ -39,11 +39,11 @@ cd "$DIRE" || return
 rm -rf blur-my-shell
 
 # Systemd Manager
-git clone https://github.com/hardpixel/systemd-manager.git
-cd systemd-manager || return
-mv ./systemd-manager@hardpixel.eu ~/.local/share/gnome-shell/extensions/systemd-manager@hardpixel.eu
-cd "$DIRE" || return
-rm -rf systemd-manager
+# git clone https://github.com/hardpixel/systemd-manager.git
+# cd systemd-manager || return
+# mv ./systemd-manager@hardpixel.eu ~/.local/share/gnome-shell/extensions/systemd-manager@hardpixel.eu
+# cd "$DIRE" || return
+# rm -rf systemd-manager
 
 # Tiling assistant
 git clone https://github.com/Leleat/Tiling-Assistant.git
@@ -74,11 +74,11 @@ cd "$DIRE" || return
 rm -rf gnome-shell-extension-caffeine
 
 # Aylur widgets
-git clone https://github.com/Aylur/gnome-extensions.git
-cd gnome-extensions || return
-mv ./widgets@aylur ~/.local/share/gnome-shell/extensions/widgets@aylur
-cd "$DIRE" || return
-rm -rf gnome-extensions
+#git clone https://github.com/Aylur/gnome-extensions.git
+#cd gnome-extensions || return
+#mv ./widgets@aylur ~/.local/share/gnome-shell/extensions/widgets@aylur
+#cd "$DIRE" || return
+#rm -rf gnome-extensions
 
 sleep 2
 
