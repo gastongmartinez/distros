@@ -92,6 +92,7 @@ PAQUETES=(
     'tmux-powerline'
     'zellij'
     'tealdeer'
+    'libgtop-devel'
     
     #### Multimedia ####
     'vlc'
