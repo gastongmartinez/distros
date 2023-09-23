@@ -28,13 +28,6 @@ git clone https://github.com/micheleg/dash-to-dock.git
 make -C dash-to-dock install
 rm -rf dash-to-dock
 
-# Dash to Panel
-git clone https://github.com/home-sweet-gnome/dash-to-panel.git
-cd dash-to-panel || return
-make install
-cd "$DIRE" || return
-rm -rf dash-to-panel
-
 # Vitals
 git clone https://github.com/corecoding/Vitals.git ~/.local/share/gnome-shell/extensions/Vitals@CoreCoding.com
 
