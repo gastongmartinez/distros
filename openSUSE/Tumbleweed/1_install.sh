@@ -74,7 +74,6 @@ PAQUETES=(
     'lshw'
     'lshw-gui'
     'neovim'
-    'python311-neovim'
     'emacs'
     'code'
     'flameshot'
@@ -122,7 +121,6 @@ PAQUETES=(
     #### Fuentes ####
     'terminus-bitmap-fonts'
     'ubuntu-fonts'
-    'fontawesome-fonts'
     'saja-cascadia-code-fonts'
     'google-roboto-mono-fonts'
     'google-roboto-slab-fonts'
@@ -143,7 +141,6 @@ PAQUETES=(
     'tidy'
     'sassc'
     'nodejs20'
-    'npm20'
     'yarn'
     'java-1_8_0-openjdk'
     'gcc-c++'
@@ -167,7 +164,6 @@ PAQUETES=(
 
     # Virtualizacion
     'virt-manager'
-    'qemu'
     'qemu-extra'
     'vde2'
     'bridge-utils'
