@@ -168,6 +168,7 @@ PAQUETES=(
     'qemu-extra'
     'vde2'
     'bridge-utils'
+    'libvirt'
 
     # WM
     'awesome'
