@@ -200,6 +200,8 @@ rm -rf wallpapers
 
 # Permisos
 USER=$(grep "1000" /etc/passwd | awk -F : '{ print $1 }')
+usermod -aG libvirt "$USER"
+usermod -aG kvm "$USER"
 
 # Icono
 {
