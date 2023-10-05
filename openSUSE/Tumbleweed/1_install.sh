@@ -94,6 +94,7 @@ PAQUETES=(
     'zellij'
     'tealdeer'
     'libgtop-devel'
+    'ulauncher'
     
     #### Multimedia ####
     'vlc'

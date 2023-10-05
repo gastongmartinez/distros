@@ -88,7 +88,6 @@ mv marksman "$HOME/.local/bin/"
 # export NIXPKGS_ALLOW_INSECURE=1
 export NIXPKGS_ALLOW_UNFREE=1
 # nix-channel --add https://nixos.org/channels/nixpkgs-unstable
-nix-env -iA nixpkgs.ulauncher
 nix-env -iA nixpkgs.mysql-workbench
 nix-env -iA nixpkgs.wlogout
 nix-env -iA nixpkgs.gnome-feeds

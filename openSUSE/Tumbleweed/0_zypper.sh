@@ -26,6 +26,8 @@ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub > linux_signi
 rpm --import linux_signing_key.pub
 zypper addrepo http://dl.google.com/linux/chrome/rpm/stable/x86_64 Google-Chrome
 
+zypper addrepo https://download.opensuse.org/repositories/home:Dead_Mozay/openSUSE_Tumbleweed/home:Dead_Mozay.repo
+
 zypper refresh
 
 zypper dup --from packman --allow-vendor-change -y
