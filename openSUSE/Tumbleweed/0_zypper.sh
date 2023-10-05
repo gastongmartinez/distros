@@ -22,6 +22,10 @@ zypper addrepo https://brave-browser-rpm-release.s3.brave.com/x86_64/ brave-brow
 
 zypper addrepo https://yum.corretto.aws/corretto.repo
 
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub > linux_signing_key.pub
+rpm --import linux_signing_key.pub
+zypper addrepo http://dl.google.com/linux/chrome/rpm/stable/x86_64 Google-Chrome
+
 zypper refresh
 
 zypper dup --from packman --allow-vendor-change -y

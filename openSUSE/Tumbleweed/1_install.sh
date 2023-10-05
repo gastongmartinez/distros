@@ -43,6 +43,7 @@ PAQUETES=(
     'remmina'
     'qbittorrent'
     'brave-browser'
+    'google-chrome-stable'
 
     #### Shells ####
     'zsh'
