@@ -40,6 +40,9 @@ rm -rf WhiteSur-cursors
 mkdir -p ~/.config/ulauncher/user-themes
 git clone https://github.com/Raayib/WhiteSur-Dark-ulauncher.git ~/.config/ulauncher/user-themes/WhiteSur-Dark-ulauncher
 # + Autostart
+if [ ! -d ~/.config/autostart ]; then
+    mkdir -p ~/.config/autostart
+fi
 {
     echo "[Desktop Entry]"
     echo "Name=Ulauncher"
