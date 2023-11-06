@@ -42,7 +42,7 @@ if [[ $DOOM =~ ^[Ss]$ ]]; then
     go install github.com/cweill/gotests/...@latest
     go install github.com/x-motemen/gore/cmd/gore@latest
     go install golang.org/x/tools/cmd/guru@latest
-    pip install nose
+    pipx install nose
     git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
     ~/.emacs.d/bin/doom install
     sleep 5
@@ -75,7 +75,11 @@ chsh -s /usr/bin/zsh
 go install golang.org/x/tools/gopls@latest
 go install golang.org/x/tools/cmd/goimports@latest
 go install github.com/go-delve/delve/cmd/dlv@latest
-pip install black 'python-lsp-server[all]' pyright yamllint autopep8
+pipx install black
+pipx install pyright
+pipx install yamllint
+pipx install autopep8
+pipx install 'python-lsp-server[all]'
 cargo install taplo-cli --locked
 cargo install stylua
 sudo npm install -g neovim prettier bash-language-server vscode-langservers-extracted emmet-ls typescript typescript-language-server yaml-language-server live-server markdownlint markdownlint-cli dockerfile-language-server-nodejs stylelint js-beautify

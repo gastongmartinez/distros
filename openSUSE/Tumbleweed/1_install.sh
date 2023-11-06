@@ -149,6 +149,7 @@ PAQUETES=(
     'gcc-c++'
     'java-17-amazon-corretto-devel'
     'java-21-amazon-corretto-devel'
+    'python311-pipx'
 
     # PostgreSQL
     'postgresql-server'
