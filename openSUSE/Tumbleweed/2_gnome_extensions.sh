@@ -73,13 +73,6 @@ make install
 cd "$DIRE" || return
 rm -rf gnome-shell-extension-caffeine
 
-# Aylur widgets
-#git clone https://github.com/Aylur/gnome-extensions.git
-#cd gnome-extensions || return
-#mv ./widgets@aylur ~/.local/share/gnome-shell/extensions/widgets@aylur
-#cd "$DIRE" || return
-#rm -rf gnome-extensions
-
 sleep 2
 
 sudo reboot
