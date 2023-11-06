@@ -148,6 +148,7 @@ PAQUETES=(
     'java-1_8_0-openjdk'
     'gcc-c++'
     'java-17-amazon-corretto-devel'
+    'java-21-amazon-corretto-devel'
 
     # PostgreSQL
     'postgresql-server'
