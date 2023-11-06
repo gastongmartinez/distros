@@ -172,6 +172,9 @@ PAQUETES=(
     'vde2'
     'bridge-utils'
     'libvirt'
+    'virtualbox'
+    'virtualbox-guest-tools'
+    'virtualbox-qt'
 
     # WM
     'awesome'
@@ -206,6 +209,7 @@ rm -rf wallpapers
 USER=$(grep "1000" /etc/passwd | awk -F : '{ print $1 }')
 usermod -aG libvirt "$USER"
 usermod -aG kvm "$USER"
+usermod -aG vboxusers "$USER"
 
 # Icono
 {
