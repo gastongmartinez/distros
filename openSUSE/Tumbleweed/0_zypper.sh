@@ -32,6 +32,8 @@ zypper refresh
 
 zypper dup --from packman --allow-vendor-change -y
 
+rm linux_signing_key.pub
+
 # Nix Package Manager
 sh <(curl -L https://nixos.org/nix/install) --daemon
 
