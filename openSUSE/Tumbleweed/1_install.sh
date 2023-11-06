@@ -228,8 +228,8 @@ echo -e "$USER ALL=NOPASSWD:/sbin/reboot\n" >> /etc/sudoers
 
 sed -i 's/Name=awesome/Name=Awesome/g' "/usr/share/xsessions/awesome.desktop"
 
-# alternatives --set java /usr/lib/jvm/java-17-amazon-corretto/bin/java
-# alternatives --set javac /usr/lib/jvm/java-17-amazon-corretto/bin/javac
+update-alternatives --set java /usr/lib/jvm/java-17-amazon-corretto/bin/java
+update-alternatives --set javac /usr/lib/jvm/java-17-amazon-corretto/bin/javac
 
 # Grub Full HD
 read -rp "Cambiar resolucion de GRUB a 1920x1080? (S/N): " RES
