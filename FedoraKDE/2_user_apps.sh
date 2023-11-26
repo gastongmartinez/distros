@@ -28,7 +28,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # Flatpak
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak --user install flathub fr.handbrake.ghb -y
 flatpak --user install flathub md.obsidian.Obsidian -y
 flatpak --user install flathub com.mattjakeman.ExtensionManager -y
 flatpak --user install flathub io.github.shiftey.Desktop -y
@@ -63,9 +62,11 @@ git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 # Anaconda
 read -rp "Instalar Anaconda3? (S/N): " ANA
 if [[ $ANA =~ ^[Ss]$ ]]; then
-    wget https://repo.anaconda.com/archive/Anaconda3-2023.07-1-Linux-x86_64.sh
-    chmod +x Anaconda3-2023.07-1-Linux-x86_64.sh
-    ./Anaconda3-2023.07-1-Linux-x86_64.sh
+    wget https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-x86_64.sh
+    chmod +x Anaconda3-2023.09-0-Linux-x86_64.sh
+    ./Anaconda3-2023.09-0-Linux-x86_64.sh
+    sleep 5
+    rm Anaconda3-2023.09-0-Linux-x86_64.sh
 fi
 
 # Bash
@@ -93,6 +94,10 @@ pip install black 'python-lsp-server[all]' pyright yamllint autopep8
 cargo install taplo-cli --locked
 cargo install stylua
 sudo npm install -g neovim prettier bash-language-server vscode-langservers-extracted emmet-ls typescript typescript-language-server yaml-language-server live-server markdownlint markdownlint-cli dockerfile-language-server-nodejs stylelint js-beautify
+wget https://github.com/artempyanykh/marksman/releases/download/2023-11-26/marksman-linux-x64
+mv marksman-linux-x64 marksman
+chmod +x marksman
+mv marksman "$HOME/.local/bin/"
 
 jgmenu_run init --theme=archlabs_1803
 
