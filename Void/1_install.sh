@@ -126,8 +126,8 @@ PAQUETES=(
     #### Diseño ####
     'gimp'
     'inkscape'
-    #'krita'
-    #'blender'
+    'krita'
+    'blender'
 
     #### DEV ####
     'git'
@@ -139,6 +139,11 @@ PAQUETES=(
     'python3'
     'python3-pipenv'
     'python3-pip'
+    'python3-yamllint'
+    'python3-lsp-server'
+    'black'
+    'pyright'
+    'autopep8'
     'filezilla'
     'sbcl'
     'go'
