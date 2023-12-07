@@ -127,7 +127,7 @@ jgmenu_run init --theme=archlabs_1803
 
 # Nix Packages
 export NIXPKGS_ALLOW_UNFREE=1
-nix-channel --add https://nixos.org/channels/nixos-23.05 nixpkgs
+nix-channel --add https://nixos.org/channels/nixos-23.11 nixpkgs
 nix-channel --update
 nix-env -iA nixpkgs.pgadmin4
 nix-env -iA nixpkgs.mysql-workbench
