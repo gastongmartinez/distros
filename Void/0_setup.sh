@@ -102,7 +102,7 @@ xbps-reconfigure -f "linux$KVER"
 ln -s /etc/sv/dbus /var/service
 ln -s /etc/sv/elogind /var/service
 ln -s /etc/sv/NetworkManager /var/service
-#ln -s /etc/sv/sshd /var/service
+ln -s /etc/sv/sshd /var/service
 ln -s /etc/sv/socklog-unix /var/service
 ln -s /etc/sv/nanoklogd /var/service
 ln -s /etc/sv/sddm /var/service
