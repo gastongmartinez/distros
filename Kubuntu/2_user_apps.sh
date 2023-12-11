@@ -94,21 +94,21 @@ sudo npm install -g neovim prettier bash-language-server vscode-langservers-extr
 mkdir -p ~/.config/ulauncher/user-themes
 git clone https://github.com/Raayib/WhiteSur-Dark-ulauncher.git ~/.config/ulauncher/user-themes/WhiteSur-Dark-ulauncher
 # + Autostart
-#if [ ! -d ~/.config/autostart ]; then
-#    mkdir ~/.config/autostart
-#fi
-#{
-#    echo "[Desktop Entry]"
-#    echo "Name=Ulauncher"
-#    echo "Comment=Application launcher for Linux"
-#    echo "GenericName=Launcher"
-#    echo "Categories=GNOME;GTK;Utility;"
-#    echo "TryExec=$HOME/.nix-profile/bin/ulauncher"
-#    echo "Exec=env GDK_BACKEND=x11 $HOME/.nix-profile/bin/ulauncher --hide-window"
-#    echo "Icon=ulauncher"
-#    echo "Terminal=false"
-#    echo "Type=Application"
-#} >>~/.config/autostart/ulauncher.desktop
+if [ ! -d ~/.config/autostart ]; then
+    mkdir ~/.config/autostart
+fi
+{
+    echo "[Desktop Entry]"
+    echo "Name=Ulauncher"
+    echo "Comment=Application launcher for Linux"
+    echo "GenericName=Launcher"
+    echo "Categories=Utility;"
+    echo "TryExec=/usr/bin/ulauncher"
+    echo "Exec=env GDK_BACKEND=x11 /usr/bin/ulauncher --hide-window"
+    echo "Icon=ulauncher"
+    echo "Terminal=false"
+    echo "Type=Application"
+} >>~/.config/autostart/ulauncher.desktop
 
 sleep 5
 
