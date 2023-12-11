@@ -89,7 +89,7 @@ PAQUETES=(
     'nmap'
     'nmapsi4'
     'wireshark'
-    'wireshark-gtk'
+    'wireshark-qt'
     'gufw'
 
     #### Diseño ####
