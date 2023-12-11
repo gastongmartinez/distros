@@ -68,7 +68,6 @@ PAQUETES=(
     'timeshift'
     'gettext'
     'flatpak'
-    'gnome-software-plugin-flatpak'
 
     #### Multimedia ####
     'vlc'
