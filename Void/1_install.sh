@@ -140,6 +140,7 @@ PAQUETES=(
     'python3-pipenv'
     'python3-pip'
     'python3-yamllint'
+    'python3-nose'
     'python3-lsp-server'
     'black'
     'pyright'

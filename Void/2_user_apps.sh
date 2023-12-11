@@ -68,7 +68,6 @@ if [[ $DOOM =~ ^[Ss]$ ]]; then
     go install github.com/cweill/gotests/...@latest
     go install github.com/x-motemen/gore/cmd/gore@latest
     go install golang.org/x/tools/cmd/guru@latest
-    pip install nose
     git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
     ~/.emacs.d/bin/doom install
     sleep 5
