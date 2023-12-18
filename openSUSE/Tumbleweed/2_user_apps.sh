@@ -93,9 +93,7 @@ export NIXPKGS_ALLOW_UNFREE=1
 # nix-channel --add https://nixos.org/channels/nixpkgs-unstable
 nix-env -iA nixpkgs.mysql-workbench
 nix-env -iA nixpkgs.wlogout
-nix-env -iA nixpkgs.gnome-feeds
 nix-env -iA nixpkgs.corectrl
-nix-env -iA nixpkgs.lazygit
 nix-env -iA nixpkgs.zsh-autosuggestions
 nix-env -iA nixpkgs.zsh-syntax-highlighting
 

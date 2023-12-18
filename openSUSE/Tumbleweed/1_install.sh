@@ -116,10 +116,10 @@ PAQUETES=(
     #'python310-gns3fy'
 
     #### Diseño ####
-    #'gimp'
+    'gimp'
     'inkscape'
-    #'krita'
-    #'blender'
+    'krita'
+    'blender'
        
     #### Fuentes ####
     'terminus-bitmap-fonts'
@@ -135,6 +135,7 @@ PAQUETES=(
     # Dev
     'git'
     'go'
+    'lazygit'
     'clang'
     'make'
     'cmake'
