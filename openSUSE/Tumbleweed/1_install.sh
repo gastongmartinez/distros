@@ -31,12 +31,6 @@ PAQUETES=(
     #### Powermanagement ####
     'powertop'
 
-    #### Gnome ####
-    'gnome-shell-extension-user-theme'
-    # 'gnome-shell-extension-pop-shell'
-    'gnome-commander'
-    'nautilus-file-roller'
-
     #### WEB ####
     'chromium'
     'MozillaThunderbird'
@@ -213,12 +207,20 @@ usermod -aG libvirt "$USER"
 usermod -aG kvm "$USER"
 usermod -aG vboxusers "$USER"
 
-# Icono
-{
-    echo '[User]'
-    echo 'Icon=/usr/share/wallpapers/Fringe/fibonacci3.jpg'
-    echo 'SystemAccount=false'
-} >>"/var/lib/AccountsService/users/$USER"
+# Gnome
+read -rp "Se instala en Gnome? (S/N): " GN
+if [[ $GN =~ ^[Ss]$ ]]; then
+    zypper install -y gnome-shell-extension-user-theme
+    #zypper install -y gnome-shell-extension-pop-shell
+    zypper install -y gnome-commander
+    zypper install -y nautilus-file-roller
+
+    {
+        echo '[User]'
+        echo 'Icon=/usr/share/wallpapers/Fringe/fibonacci3.jpg'
+        echo 'SystemAccount=false'
+    } >>"/var/lib/AccountsService/users/$USER"
+fi
 
 # Habilitar cockpit
 systemctl enable --now cockpit.socket
