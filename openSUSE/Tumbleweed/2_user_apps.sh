@@ -94,7 +94,6 @@ export NIXPKGS_ALLOW_UNFREE=1
 nix-env -iA nixpkgs.mysql-workbench
 nix-env -iA nixpkgs.wlogout
 nix-env -iA nixpkgs.corectrl
-nix-env -iA nixpkgs.zsh-syntax-highlighting
 
 jgmenu_run init --theme=archlabs_1803
 

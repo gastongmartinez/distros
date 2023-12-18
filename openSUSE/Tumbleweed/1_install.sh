@@ -42,6 +42,7 @@ PAQUETES=(
     #### Shells ####
     'zsh'
     'zsh-autosuggestions'
+    'zsh-syntax-highlighting'
     'alacritty-bash-completion'
     'alacritty-zsh-completion'
     'ShellCheck'
