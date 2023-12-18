@@ -64,6 +64,26 @@ fi
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 sed -i 's/"font"/"powerline"/g' "$HOME/.bashrc"
 
+# Tema Ulauncher
+mkdir -p ~/.config/ulauncher/user-themes
+git clone https://github.com/Raayib/WhiteSur-Dark-ulauncher.git ~/.config/ulauncher/user-themes/WhiteSur-Dark-ulauncher
+# + Autostart
+if [ ! -d ~/.config/autostart ]; then
+    mkdir -p ~/.config/autostart
+fi
+{
+    echo "[Desktop Entry]"
+    echo "Name=Ulauncher"
+    echo "Comment=Application launcher for Linux"
+    echo "GenericName=Launcher"
+    echo "Categories=GNOME;GTK;Utility;"
+    echo "TryExec=/usr/bin/ulauncher"
+    echo "Exec=env GDK_BACKEND=x11 /usr/bin/ulauncher --hide-window"
+    echo "Icon=ulauncher"
+    echo "Terminal=false"
+    echo "Type=Application"
+} >>~/.config/autostart/ulauncher.desktop
+
 # ZSH
 if [ ! -d ~/.local/share/zsh ]; then
     mkdir -p ~/.local/share/zsh

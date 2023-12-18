@@ -36,26 +36,6 @@ rm -rf WhiteSur-icon-theme
 rm -rf WhiteSur-cursors
 #############################################################################################################################################
 
-# Tema Ulauncher
-mkdir -p ~/.config/ulauncher/user-themes
-git clone https://github.com/Raayib/WhiteSur-Dark-ulauncher.git ~/.config/ulauncher/user-themes/WhiteSur-Dark-ulauncher
-# + Autostart
-if [ ! -d ~/.config/autostart ]; then
-    mkdir -p ~/.config/autostart
-fi
-{
-    echo "[Desktop Entry]"
-    echo "Name=Ulauncher"
-    echo "Comment=Application launcher for Linux"
-    echo "GenericName=Launcher"
-    echo "Categories=GNOME;GTK;Utility;"
-    echo "TryExec=/usr/bin/ulauncher"
-    echo "Exec=env GDK_BACKEND=x11 /usr/bin/ulauncher --hide-window"
-    echo "Icon=ulauncher"
-    echo "Terminal=false"
-    echo "Type=Application"
-} >>~/.config/autostart/ulauncher.desktop
-
 ############################################## Extensiones ##################################################################################
 # Activar extensiones
 dconf write /org/gnome/shell/enabled-extensions "['user-theme@gnome-shell-extensions.gcampax.github.com', 'arcmenu@arcmenu.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'Vitals@CoreCoding.com', 'systemd-manager@hardpixel.eu', 'tiling-assistant@leleat-on-github', 'blur-my-shell@aunetx', 'no-overview@fthx', 'dash-to-dock@micxgx.gmail.com', 'caffeine@patapon.info']"
