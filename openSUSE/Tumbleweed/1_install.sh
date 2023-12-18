@@ -91,6 +91,7 @@ PAQUETES=(
     'tealdeer'
     'libgtop-devel'
     'ulauncher'
+    'corectrl'
     
     #### Multimedia ####
     'vlc'

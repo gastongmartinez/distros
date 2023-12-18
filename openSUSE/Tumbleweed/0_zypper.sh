@@ -32,6 +32,8 @@ zypper addrepo https://download.opensuse.org/repositories/shells:zsh-users:zsh-a
 
 zypper addrepo https://download.opensuse.org/repositories/shells:zsh-users:zsh-syntax-highlighting/openSUSE_Tumbleweed/shells:zsh-users:zsh-syntax-highlighting.repo
 
+zypper addrepo https://download.opensuse.org/repositories/home:Dead_Mozay/openSUSE_Tumbleweed/home:Dead_Mozay.repo
+
 zypper refresh
 
 zypper dup --from packman --allow-vendor-change -y

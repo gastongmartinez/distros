@@ -93,7 +93,6 @@ export NIXPKGS_ALLOW_UNFREE=1
 # nix-channel --add https://nixos.org/channels/nixpkgs-unstable
 nix-env -iA nixpkgs.mysql-workbench
 nix-env -iA nixpkgs.wlogout
-nix-env -iA nixpkgs.corectrl
 
 jgmenu_run init --theme=archlabs_1803
 
