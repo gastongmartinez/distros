@@ -231,7 +231,7 @@ firewall-cmd --add-service=cockpit
 firewall-cmd --add-service=cockpit --permanent
 
 # Habilitar reinicio
-echo -e "$USER ALL=NOPASSWD:/sbin/reboot\n" >> /etc/sudoers
+echo -e "$USER ALL=NOPASSWD:/usr/sbin/reboot\n" >> /etc/sudoers
 
 sed -i 's/Name=awesome/Name=Awesome/g' "/usr/share/xsessions/awesome.desktop"
 
