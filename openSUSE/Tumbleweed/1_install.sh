@@ -230,9 +230,6 @@ systemctl enable --now cockpit.socket
 firewall-cmd --add-service=cockpit
 firewall-cmd --add-service=cockpit --permanent
 
-# Habilitar reinicio
-echo -e "$USER ALL=NOPASSWD:/usr/sbin/reboot\n" >> /etc/sudoers
-
 sed -i 's/Name=awesome/Name=Awesome/g' "/usr/share/xsessions/awesome.desktop"
 
 update-alternatives --set java /usr/lib/jvm/java-17-amazon-corretto/bin/java
