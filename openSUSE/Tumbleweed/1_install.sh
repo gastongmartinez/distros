@@ -75,7 +75,6 @@ PAQUETES=(
     'code'
     'flameshot'
     'klavaro'
-    'xdpyinfo'
     'the_silver_searcher'
     'fzf'
     'qalculate'
