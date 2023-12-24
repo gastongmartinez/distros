@@ -182,6 +182,8 @@ PAQUETES=(
     'virt-manager-tools'
     'bridge-utils'
     'libguestfs'
+    'virtualbox-ose'
+    'virtualbox-ose-guest'
 
     ### Window Managers ###
     'qtile'
@@ -245,6 +247,7 @@ sed -i 's/Name=awesome/Name=Awesome/g' "/usr/share/xsessions/awesome.desktop"
 
 usermod -aG libvirt "$USER"
 usermod -aG kvm "$USER"
+usermod -aG vboxusers "$USER"
 
 ufw enable
 ufw allow ssh
