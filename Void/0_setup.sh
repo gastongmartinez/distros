@@ -90,6 +90,9 @@ xbps-install -y xdg-utils
 # Logs
 xbps-install -y socklog-void
 
+# NTP
+xbps-install -y chrony
+
 # Firmware
 xbps-install -y intel-ucode
 xbps-install -y linux-firmware-amd
@@ -106,5 +109,6 @@ ln -s /etc/sv/sshd /var/service
 ln -s /etc/sv/socklog-unix /var/service
 ln -s /etc/sv/nanoklogd /var/service
 ln -s /etc/sv/sddm /var/service
+ln -s /etc/sv/chronyd /var/service
 
 reboot
