@@ -151,6 +151,7 @@ PAQUETES=(
     'qalculate-gtk'
     'calibre'
     'foliate'
+    'libreoffice-langpack-es'
     'hunspell'
     'hunspell-en-US'
     'hunspell-es-AR'
