@@ -32,6 +32,7 @@ flatpak --user install flathub io.github.shiftey.Desktop -y
 flatpak --user install flathub com.github.tchx84.Flatseal -y
 flatpak --user install flathub io.podman_desktop.PodmanDesktop -y
 flatpak --user install flathub io.gitlab.librewolf-community -y
+flatpak --user install flathub org.wezfurlong.wezterm -y
 
 # Doom Emacs
 read -rp "Instalar Doom Emacs? (S/N): " DOOM
