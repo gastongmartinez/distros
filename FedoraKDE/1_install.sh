@@ -64,10 +64,10 @@ dnf config-manager --add-repo https://rpm.librewolf.net/librewolf-repo.repo
 sh -c 'echo -e "[google-chrome]\nname=google-chrome\nbaseurl=https://dl.google.com/linux/chrome/rpm/stable/x86_64\nenabled=1\ngpgcheck=1\ngpgkey=https://dl.google.com/linux/linux_signing_key.pub" > /etc/yum.repos.d/google-chrome.repo'
 
 # CORP
-dnf copr enable frostyx/qtile -y
+#dnf copr enable frostyx/qtile -y
 dnf copr enable atim/lazygit -y
 dnf copr enable varlad/helix -y
-dnf copr enable erikreider/SwayNotificationCenter -y
+#dnf copr enable erikreider/SwayNotificationCenter -y
 
 USER=$(grep "1000" /etc/passwd | awk -F : '{ print $1 }')
 
@@ -251,23 +251,23 @@ PAQUETES=(
     #'virtualbox-guest-additions'
 
     ### Window Managers ###
-    'qtile'
-    'awesome'
-    'nitrogen'
-    'feh'
-    'picom'
-    'lxappearance'
-    'xorg-x11-server-Xephyr'
-    'jgmenu'
-    'i3lock'
-    'sway'
-    'grimshot'
-    'waybar'
-    'wofi'
-    'wlr-randr'
-    'wlogout'
-    'SwayNotificationCenter'
-    'pavucontrol'
+    #'qtile'
+    #'awesome'
+    #'nitrogen'
+    #'feh'
+    #'picom'
+    #'lxappearance'
+    #'xorg-x11-server-Xephyr'
+    #'jgmenu'
+    #'i3lock'
+    #'sway'
+    #'grimshot'
+    #'waybar'
+    #'wofi'
+    #'wlr-randr'
+    #'wlogout'
+    #'SwayNotificationCenter'
+    #'pavucontrol'
 )
  
 for PAQ in "${PAQUETES[@]}"; do
@@ -306,7 +306,7 @@ rm -rf grub2-themes
 rm amazon-corretto-17-x64-linux-jdk.rpm
 rm amazon-corretto-21-x64-linux-jdk.rpm
 
-sed -i 's/Name=awesome/Name=Awesome/g' "/usr/share/xsessions/awesome.desktop"
+#sed -i 's/Name=awesome/Name=Awesome/g' "/usr/share/xsessions/awesome.desktop"
 
 usermod -aG libvirt "$USER"
 usermod -aG kvm "$USER"
