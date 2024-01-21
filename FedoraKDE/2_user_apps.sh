@@ -38,6 +38,7 @@ flatpak --user install flathub com.github.tchx84.Flatseal -y
 flatpak --user install flathub com.github.neithern.g4music -y
 flatpak --user install flathub com.axosoft.GitKraken -y
 flatpak --user install flathub io.podman_desktop.PodmanDesktop -y
+flatpak --user install flathub org.wezfurlong.wezterm -y
 
 # Doom Emacs
 read -rp "Instalar Doom Emacs? (S/N): " DOOM
