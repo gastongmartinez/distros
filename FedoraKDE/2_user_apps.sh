@@ -99,6 +99,7 @@ wget https://github.com/artempyanykh/marksman/releases/download/2023-11-26/marks
 mv marksman-linux-x64 marksman
 chmod +x marksman
 mv marksman "$HOME/.local/bin/"
+cargo install atuin
 
 jgmenu_run init --theme=archlabs_1803
 
