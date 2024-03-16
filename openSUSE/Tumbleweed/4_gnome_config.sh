@@ -107,11 +107,6 @@ flatpak --user override --filesystem="$HOME"/.themes
 flatpak --user override --env=GTK_THEME=WhiteSur-Dark
 #############################################################################################################################################
 
-{
-    echo 'menu_margin_x        = 10'
-    echo 'menu_margin_y        = 480'
-} >>~/.config/jgmenu/jgmenurc
-
 sleep 5
 
 sudo reboot

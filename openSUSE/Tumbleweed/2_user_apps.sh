@@ -22,7 +22,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # Flatpack
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak --user install flathub md.obsidian.Obsidian -y
-#flatpak --user install flathub com.mattjakeman.ExtensionManager -y
+flatpak --user install flathub com.mattjakeman.ExtensionManager -y
 flatpak --user install flathub io.github.shiftey.Desktop -y
 flatpak --user install flathub net.ankiweb.Anki -y
 flatpak --user install flathub com.github.tchx84.Flatseal -y
@@ -113,9 +113,6 @@ mv marksman "$HOME/.local/bin/"
 export NIXPKGS_ALLOW_UNFREE=1
 # nix-channel --add https://nixos.org/channels/nixpkgs-unstable
 nix-env -iA nixpkgs.mysql-workbench
-nix-env -iA nixpkgs.wlogout
-
-jgmenu_run init --theme=archlabs_1803
 
 sleep 5
 

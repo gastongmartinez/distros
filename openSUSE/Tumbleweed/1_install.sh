@@ -170,21 +170,6 @@ PAQUETES=(
     'vde2'
     'bridge-utils'
     'libvirt'
-    'virtualbox'
-    'virtualbox-guest-tools'
-    'virtualbox-qt'
-
-    # WM
-    'awesome'
-    'dmenu'
-    'nitrogen'       
-    'feh'
-    'picom'
-    'lxappearance'
-    'qtile'
-    'jgmenu'
-    'sway'
-    'wlr-randr'
 
     # Codecs
     'gstreamer-plugin-openh264'
@@ -207,7 +192,6 @@ rm -rf wallpapers
 USER=$(grep "1000" /etc/passwd | awk -F : '{ print $1 }')
 usermod -aG libvirt "$USER"
 usermod -aG kvm "$USER"
-usermod -aG vboxusers "$USER"
 
 # Gnome
 read -rp "Se instala en Gnome? (S/N): " GN
@@ -228,8 +212,6 @@ fi
 systemctl enable --now cockpit.socket
 firewall-cmd --add-service=cockpit
 firewall-cmd --add-service=cockpit --permanent
-
-sed -i 's/Name=awesome/Name=Awesome/g' "/usr/share/xsessions/awesome.desktop"
 
 update-alternatives --set java /usr/lib/jvm/java-17-amazon-corretto/bin/java
 update-alternatives --set javac /usr/lib/jvm/java-17-amazon-corretto/bin/javac
