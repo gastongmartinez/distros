@@ -21,7 +21,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # Flatpack
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak --user install flathub md.obsidian.Obsidian -y
 flatpak --user install flathub com.mattjakeman.ExtensionManager -y
 flatpak --user install flathub io.github.shiftey.Desktop -y
 flatpak --user install flathub net.ankiweb.Anki -y
@@ -54,10 +53,10 @@ git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 # Anaconda
 read -rp "Instalar Anaconda3? (S/N): " ANA
 if [[ $ANA =~ ^[Ss]$ ]]; then
-    wget https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-x86_64.sh
-    chmod +x Anaconda3-2023.09-0-Linux-x86_64.sh
-    ./Anaconda3-2023.09-0-Linux-x86_64.sh
-    rm Anaconda3-2023.09-0-Linux-x86_64.sh
+    wget https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh
+    chmod +x Anaconda3-2024.02-1-Linux-x86_64.sh
+    ./Anaconda3-2024.02-1-Linux-x86_64.sh
+    rm Anaconda3-2024.02-1-Linux-x86_64.sh
 fi
 
 # Bash
