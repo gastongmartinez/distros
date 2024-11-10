@@ -147,7 +147,7 @@ PAQUETES=(
     'fzf'
     'the_silver_searcher'
     'qalculate'
-    'qalculate-gtk'
+    'qalculate-qt'
     'calibre'
     'foliate'
     'hunspell-de'
