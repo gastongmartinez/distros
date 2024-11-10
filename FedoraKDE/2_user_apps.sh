@@ -89,7 +89,7 @@ pip install black 'python-lsp-server[all]' pyright yamllint autopep8
 cargo install taplo-cli --locked
 cargo install stylua
 sudo npm install -g neovim prettier bash-language-server vscode-langservers-extracted emmet-ls typescript typescript-language-server yaml-language-server live-server markdownlint markdownlint-cli dockerfile-language-server-nodejs stylelint js-beautify
-wget https://github.com/artempyanykh/marksman/releases/download/2023-11-26/marksman-linux-x64
+wget https://github.com/artempyanykh/marksman/releases/download/2023-12-09/marksman-linux-x64
 mv marksman-linux-x64 marksman
 chmod +x marksman
 mv marksman "$HOME/.local/bin/"
