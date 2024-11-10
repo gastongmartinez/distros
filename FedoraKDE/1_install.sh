@@ -147,10 +147,6 @@ PAQUETES=(
     'qalculate-gtk'
     'calibre'
     'foliate'
-    'libreoffice-langpack-es'
-    'hunspell'
-    'hunspell-en-US'
-    'hunspell-es-AR'
     'hunspell-de'
     'pandoc'
     'dconf-editor'
@@ -159,7 +155,6 @@ PAQUETES=(
     'stacer'
     'timeshift'
     'setroubleshoot'
-    'gettext'
 
     #### Multimedia ####
     'vlc'
@@ -191,9 +186,6 @@ PAQUETES=(
     'clang-tools-extra'
     'cmake'
     'meson'
-    'pipenv'
-    #'python3-spyder'
-    #'rstudio-desktop'
     'python3-pip'
     'filezilla'
     'sbcl'
@@ -205,6 +197,11 @@ PAQUETES=(
     'yarnpkg'
     'lazygit'
     'pcre-cpp'
+    'httpd'
+    'php'
+    'php-common'
+    'php-gd'
+    'php-mysqlnd'
 
     #### Fuentes ####
     'terminus-fonts'
@@ -243,27 +240,6 @@ PAQUETES=(
     'ebtables-services'
     'bridge-utils'
     'libguestfs'
-    #'VirtualBox'
-    #'virtualbox-guest-additions'
-
-    ### Window Managers ###
-    #'qtile'
-    #'awesome'
-    #'nitrogen'
-    #'feh'
-    #'picom'
-    #'lxappearance'
-    #'xorg-x11-server-Xephyr'
-    #'jgmenu'
-    #'i3lock'
-    #'sway'
-    #'grimshot'
-    #'waybar'
-    #'wofi'
-    #'wlr-randr'
-    #'wlogout'
-    #'SwayNotificationCenter'
-    #'pavucontrol'
 )
  
 for PAQ in "${PAQUETES[@]}"; do
