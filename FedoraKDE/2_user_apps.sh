@@ -74,6 +74,10 @@ if [ ! -d ~/.config/autostart ]; then
 fi
 cp /usr/share/applications/ulauncher.desktop ~/.config/autostart/
 
+# Tema Ulauncher
+mkdir -p ~/.config/ulauncher/user-themes
+git clone https://github.com/Raayib/WhiteSur-Dark-ulauncher.git ~/.config/ulauncher/user-themes/WhiteSur-Dark-ulauncher
+
 # ZSH
 if [ ! -d ~/.local/share/zsh ]; then
     mkdir -p ~/.local/share/zsh
