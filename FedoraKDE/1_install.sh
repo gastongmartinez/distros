@@ -247,9 +247,10 @@ for PAQ in "${PAQUETES[@]}"; do
 done
 
 rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
-rpm -i https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-8.0.31-1.fc37.x86_64.rpm
+wget https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-8.0.40-1.fc41.x86_64.rpm
 wget https://corretto.aws/downloads/latest/amazon-corretto-17-x64-linux-jdk.rpm
 wget https://corretto.aws/downloads/latest/amazon-corretto-21-x64-linux-jdk.rpm
+dnf install mysql-workbench-community-8.0.40-1.fc41.x86_64.rpm -y
 dnf install amazon-corretto-17-x64-linux-jdk.rpm -y
 dnf install amazon-corretto-21-x64-linux-jdk.rpm -y
 ###############################################################################
