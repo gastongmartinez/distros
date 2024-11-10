@@ -63,10 +63,7 @@ curl -fsSL https://repo.librewolf.net/librewolf.repo | pkexec tee /etc/yum.repos
 sh -c 'echo -e "[google-chrome]\nname=google-chrome\nbaseurl=https://dl.google.com/linux/chrome/rpm/stable/x86_64\nenabled=1\ngpgcheck=1\ngpgkey=https://dl.google.com/linux/linux_signing_key.pub" > /etc/yum.repos.d/google-chrome.repo'
 
 # CORP
-#dnf copr enable frostyx/qtile -y
 dnf copr enable atim/lazygit -y
-dnf copr enable varlad/helix -y
-#dnf copr enable erikreider/SwayNotificationCenter -y
 
 USER=$(grep "1000" /etc/passwd | awk -F : '{ print $1 }')
 
