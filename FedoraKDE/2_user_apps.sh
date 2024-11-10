@@ -97,7 +97,7 @@ cargo install --locked zellij
 
 curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
 
-
+sudo mysql_secure_installation
 
 sleep 5
 
