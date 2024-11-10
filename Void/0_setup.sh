@@ -25,6 +25,19 @@ xbps-install -y bash-completion
 xbps-install -y autojump
 xbps-install -y ShellCheck
 
+# Usuario
+read -rp "Crear usuario? (S/N): " USR
+if [ "$USR" == 'S' ]; 
+then
+    echo -e "\nEl usuario será incluido en el grupo wheel.\n"
+    read -rp "Ingresar el nombre del usuario: " USUARIO
+    read -rp "Ingresar el nombre completo del usuario: " NOMBRE
+    useradd -m -g users -G wheel -s /usr/bin/zsh -c "$NOMBRE" "$USUARIO"
+    echo -e "\nIngresar password para el usuario $USUARIO\n"
+    passwd "$USUARIO"
+    usermod -aG tty,lp,audio,video,cdrom,optical,mail,storage,scanner,network,kvm,input,plugdev,usbmon "$USUARIO"
+fi
+
 # KDE
 xbps-install -y xorg
 xbps-install -y kde5
