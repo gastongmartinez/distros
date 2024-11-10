@@ -93,6 +93,7 @@ wget https://github.com/artempyanykh/marksman/releases/download/2023-12-09/marks
 mv marksman-linux-x64 marksman
 chmod +x marksman
 mv marksman "$HOME/.local/bin/"
+cargo install --locked zellij
 
 curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
 
