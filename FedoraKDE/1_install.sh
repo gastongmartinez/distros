@@ -25,7 +25,6 @@ systemctl enable sshd
 # Ajuste Swappiness
 su - root <<EOF
         echo -e "vm.swappiness=10\n" >> /etc/sysctl.d/90-sysctl.conf
-        echo "setxkbmap es" >> /usr/share/sddm/scripts/Xsetup
 EOF
 
 # Configuracion DNF
