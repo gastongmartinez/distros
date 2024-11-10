@@ -17,6 +17,14 @@ xbps-install -Suvy
 # Ajuste Swappiness
 echo -e "vm.swappiness=10\n" >> /etc/sysctl.conf
 
+# Shells
+xbps-install -y zsh
+xbps-install -y zsh-autosuggestions
+xbps-install -y zsh-syntax-highlighting
+xbps-install -y bash-completion
+xbps-install -y autojump
+xbps-install -y ShellCheck
+
 # KDE
 xbps-install -y xorg
 xbps-install -y kde5

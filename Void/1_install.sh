@@ -23,14 +23,6 @@ PAQUETES=(
     'remmina'
     'qbittorrent'
 
-    #### Shells ####
-    'zsh'
-    'zsh-autosuggestions'
-    'zsh-syntax-highlighting'
-    'bash-completion'
-    'autojump'
-    'ShellCheck'
-
     #### Archivos ####
     'mc'
     'Thunar'
