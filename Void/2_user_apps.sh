@@ -114,7 +114,7 @@ curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
 
 # Nix Packages
 export NIXPKGS_ALLOW_UNFREE=1
-nix-channel --add https://nixos.org/channels/nixos-23.11 nixpkgs
+nix-channel --add https://nixos.org/channels/nixos-24.05 nixpkgs
 nix-channel --update
 nix-env -iA nixpkgs.pgadmin4
 nix-env -iA nixpkgs.mysql-workbench
