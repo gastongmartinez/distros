@@ -152,7 +152,6 @@ PAQUETES=(
     'foliate'
     'hunspell-de'
     'pandoc'
-    'dconf-editor'
     'ulauncher'
     'dnfdragora'
     'stacer'
