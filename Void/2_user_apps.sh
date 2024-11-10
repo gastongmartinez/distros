@@ -98,7 +98,6 @@ if [ ! -d ~/.local/share/zsh ]; then
 fi
 touch ~/.zshrc
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.local/share/zsh/powerlevel10k
-chsh -s /usr/bin/zsh
 
 go install golang.org/x/tools/gopls@latest
 go install golang.org/x/tools/cmd/goimports@latest
