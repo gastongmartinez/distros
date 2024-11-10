@@ -276,19 +276,19 @@ cd .. || return
 #################################################################################
 
 rm -rf grub2-themes
+rm mysql-workbench-community-8.0.40-1.fc41.x86_64.rpm
 rm amazon-corretto-17-x64-linux-jdk.rpm
 rm amazon-corretto-21-x64-linux-jdk.rpm
 
-#sed -i 's/Name=awesome/Name=Awesome/g' "/usr/share/xsessions/awesome.desktop"
-
 usermod -aG libvirt "$USER"
 usermod -aG kvm "$USER"
-#usermod -aG vboxusers "$USER"
 
 postgresql-setup --initdb --unit postgresql
+systemctl enable --now mysqld
 systemctl enable --now cockpit.socket
-firewall-cmd --add-service=cockpit
 firewall-cmd --add-service=cockpit --permanent
+firewall-cmd --add-service=http --permanent
+firewall-cmd --add-service=https --permanent
 
 alternatives --set java /usr/lib/jvm/java-17-amazon-corretto/bin/java
 alternatives --set javac /usr/lib/jvm/java-17-amazon-corretto/bin/javac
@@ -297,6 +297,9 @@ read -rp "Modificar fstab? (S/N): " FST
 if [[ $FST =~ ^[Ss]$ ]]; then
     sed -i 's/subvol=@/compress=zstd,noatime,space_cache=v2,ssd,discard=async,subvol=@/g' "/etc/fstab"
 fi
+
+cd /usr/bin || return
+ln -s lldb-dap lldb-vscode
 
 sleep 2
 
