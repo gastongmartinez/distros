@@ -110,13 +110,6 @@ mv marksman-linux-x64 marksman
 chmod +x marksman
 mv marksman "$HOME/.local/bin/"
 
-jgmenu_run init --theme=archlabs_1803
-
-{
-    echo 'menu_margin_x        = 10'
-    echo 'menu_margin_y        = 480'
-} >>~/.config/jgmenu/jgmenurc
-
 # Nix Packages
 export NIXPKGS_ALLOW_UNFREE=1
 nix-channel --add https://nixos.org/channels/nixos-23.11 nixpkgs
