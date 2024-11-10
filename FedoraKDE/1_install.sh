@@ -65,6 +65,9 @@ sh -c 'echo -e "[google-chrome]\nname=google-chrome\nbaseurl=https://dl.google.c
 # CORP
 dnf copr enable atim/lazygit -y
 
+# MariaDB
+dnf remove mariadb-server -y
+
 USER=$(grep "1000" /etc/passwd | awk -F : '{ print $1 }')
 
 ############################### Apps Generales ################################
@@ -221,7 +224,7 @@ PAQUETES=(
     'postgis'
     'postgis-client'
     'postgis-utils'
-    'community-mysql-server'
+    'mysql-server'
     'sqlite'
     'sqlite-analyzer'
     'sqlite-tools'
