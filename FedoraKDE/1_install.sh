@@ -32,11 +32,13 @@ EOF
     echo 'fastestmirror=1'
     echo 'max_parallel_downloads=10'
 } >> /etc/dnf/dnf.conf
-dnf update -y
 
 # RPMFusion
 dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-"$(rpm -E %fedora)".noarch.rpm -y
 dnf install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-"$(rpm -E %fedora)".noarch.rpm -y
+
+# PGAdmin4
+rpm -i https://ftp.postgresql.org/pub/pgadmin/pgadmin4/yum/pgadmin4-fedora-repo-2-1.noarch.rpm
 
 # MESA
 read -rp "Cambiar drivers de video a MESA Freeworld? (S/N): " MESA
@@ -67,6 +69,8 @@ dnf copr enable atim/lazygit -y
 
 # MariaDB
 dnf remove mariadb-server -y
+
+dnf update -y
 
 USER=$(grep "1000" /etc/passwd | awk -F : '{ print $1 }')
 
