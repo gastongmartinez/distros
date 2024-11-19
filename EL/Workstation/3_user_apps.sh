@@ -112,6 +112,8 @@ sudo npm install -g neovim prettier bash-language-server vscode-langservers-extr
 
 cargo install --locked zellij
 
+curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
+
 sleep 5
 
 reboot
