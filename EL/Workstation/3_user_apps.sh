@@ -75,7 +75,6 @@ chsh -s /usr/bin/zsh
 # Paquetes Nix
 export NIXPKGS_ALLOW_UNFREE=1
 nix-channel --add https://nixos.org/channels/nixpkgs-unstable
-nix-env -iA nixpkgs.sqlitebrowser
 nix-env -iA nixpkgs.inkscape
 nix-env -iA nixpkgs.gimp
 nix-env -iA nixpkgs.foliate
@@ -103,10 +102,7 @@ nix-env -iA nixpkgs.zsh-syntax-highlighting
 nix-env -iA nixpkgs.fzf
 nix-env -iA nixpkgs.pipenv
 nix-env -iA nixpkgs.lazygit
-nix-env -iA nixpkgs.pgadmin4
-#nix-env -iA nixpkgs.mysql80
-nix-env -iA nixpkgs.mysql-workbench
-nix-env -iA nixpkgs.sqlite-analyzer
+
 
 go install golang.org/x/tools/gopls@latest
 go install golang.org/x/tools/cmd/goimports@latest

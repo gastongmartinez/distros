@@ -108,10 +108,6 @@ PAQUETES=(
     'google-roboto-fonts'
     'ht-caladea-fonts'
 
-    #### Bases de datos ####
-    'postgresql-server'
-    'sqlite'
-
     #### Cockpit ####
     'cockpit-machines'
 
@@ -160,7 +156,6 @@ rm ./*.rpm
 usermod -aG libvirt "$USER"
 usermod -aG kvm "$USER"
 
-postgresql-setup --initdb --unit postgresql
 systemctl enable --now cockpit.socket
 firewall-cmd --add-service=cockpit --permanent
 
