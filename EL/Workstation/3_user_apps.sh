@@ -32,6 +32,21 @@ flatpak --user install flathub com.mattjakeman.ExtensionManager -y
 flatpak --user install flathub com.github.tchx84.Flatseal -y
 flatpak --user install flathub com.github.neithern.g4music -y
 flatpak --user install flathub io.podman_desktop.PodmanDesktop -y
+flatpak --user install flathub org.inkscape.Inkscape -y
+flatpak --user install flathub org.gimp.GIMP -y
+flatpak --user install flathub com.github.johnfactotum.Foliate -y
+flatpak --user install flathub com.calibre_ebook.calibre -y
+flatpak --user install flathub io.github.Qalculate -y
+flatpak --user install flathub org.flameshot.Flameshot -y
+flatpak --user install flathub org.qbittorrent.qBittorrent -y
+flatpak --user install flathub org.videolan.VLC -y
+flatpak --user install flathub io.mpv.Mpv -y
+flatpak --user install flathub org.gabmus.gfeeds -y
+flatpak --user install flathub com.axosoft.GitKraken -y
+flatpak --user install flathub net.ankiweb.Anki -y
+flatpak --user install flathub io.github.shiftey.Desktop -y
+flatpak --user install flathub fr.handbrake.ghb -y
+flatpak --user install flathub org.libreoffice.LibreOffice -y
 
 # Doom Emacs
 read -rp "Instalar Doom Emacs? (S/N): " DOOM
@@ -75,24 +90,6 @@ chsh -s /usr/bin/zsh
 # Paquetes Nix
 export NIXPKGS_ALLOW_UNFREE=1
 nix-channel --add https://nixos.org/channels/nixpkgs-unstable
-nix-env -iA nixpkgs.inkscape
-nix-env -iA nixpkgs.gimp
-nix-env -iA nixpkgs.foliate
-nix-env -iA nixpkgs.calibre
-nix-env -iA nixpkgs.qalculate-gtk
-nix-env -iA nixpkgs.flameshot
-nix-env -iA nixpkgs.qbittorrent
-nix-env -iA nixpkgs.vlc
-nix-env -iA nixpkgs.mpv
-nix-env -iA nixpkgs.gnome-feeds
-nix-env -iA nixpkgs.gitkraken
-nix-env -iA nixpkgs.blanket
-nix-env -iA nixpkgs.marktext
-nix-env -iA nixpkgs.anki
-nix-env -iA nixpkgs.github-desktop
-nix-env -iA nixpkgs.obsidian
-nix-env -iA nixpkgs.handbrake
-nix-env -iA nixpkgs.libreoffice-fresh
 nix-env -iA nixpkgs.ulauncher
 nix-env -iA nixpkgs.neovim
 nix-env -iA nixpkgs.helix
