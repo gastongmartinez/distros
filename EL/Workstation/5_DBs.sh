@@ -12,7 +12,16 @@ export LANG=en_US.UTF-8
 # SQLite
 read -rp "Instalar SQLite? (S/N): " LITE
 if [[ $LITE =~ ^[Ss]$ ]]; then
-    dnf install sqlite
+    dnf install -y sqlite
     nix-env -iA nixpkgs.sqlitebrowser
     nix-env -iA nixpkgs.sqlite-analyzer
+fi
+
+# MySQL
+read -rp "Instalar MySQL? (S/N): " MYSQL
+if [[ $MYSQL =~ ^[Ss]$ ]]; then
+    dnf install -y https://dev.mysql.com/get/mysql84-community-release-el9-1.noarch.rpm
+    dnf install -y mysql-community-server
+
+    dnf install -y https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-8.0.40-1.el9.x86_64.rpm
 fi
