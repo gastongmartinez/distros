@@ -69,5 +69,9 @@ if [[ $MS =~ ^[Ss]$ ]]; then
 
     firewall-cmd --zone=public --add-port=1433/tcp --permanent
     firewall-cmd --reload
+
+    wget --output-document azuredatastudio.rpm https://azuredatastudio-update.azurewebsites.net/latest/linux-rpm-x64/stable
+    dnf install -y ./azuredatastudio.rpm
+    rm ./*.rpm
 fi
 
