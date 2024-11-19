@@ -25,6 +25,7 @@ if [[ $MYSQL =~ ^[Ss]$ ]]; then
 
     dnf install -y https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-8.0.40-1.el9.x86_64.rpm
 
+    systemctl enable --now mysqld
     mysql_secure_installation
 fi
 
@@ -57,3 +58,16 @@ if [[ $ORA =~ ^[Ss]$ ]]; then
     dnf install -y https://download.oracle.com/otn_software/java/sqldeveloper/sqldeveloper-24.3.0-284.2209.noarch.rpm
     dnf install -y https://download.oracle.com/otn_software/java/sqldeveloper/datamodeler-24.3.0.240.1210-macosx.app.zip
 fi
+
+# MS SQL
+read -rp "Instalar MS SQL Server? (S/N): " MS
+if [[ $MS =~ ^[Ss]$ ]]; then
+    curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/9/mssql-server-2022.repo
+    dnf install -y mssql-server
+
+    /opt/mssql/bin/mssql-conf setup
+
+    firewall-cmd --zone=public --add-port=1433/tcp --permanent
+    firewall-cmd --reload
+fi
+
