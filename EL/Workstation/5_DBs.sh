@@ -45,3 +45,15 @@ if [[ $PSQL =~ ^[Ss]$ ]]; then
     rpm -i https://ftp.postgresql.org/pub/pgadmin/pgadmin4/yum/pgadmin4-redhat-repo-2-1.noarch.rpm
     dnf install pgadmin4
 fi
+
+# Oracle
+read -rp "Instalar Oracle 23ai Free? (S/N): " ORA
+if [[ $ORA =~ ^[Ss]$ ]]; then
+    dnf install -y https://yum.oracle.com/repo/OracleLinux/OL9/appstream/x86_64/getPackage/oracle-database-preinstall-23ai-1.0-2.el9.x86_64.rpm
+    dnf install -y https://download.oracle.com/otn-pub/otn_software/db-free/oracle-database-free-23ai-1.0-1.el9.x86_64.rpm
+
+    /etc/init.d/oracle-free-23ai configure
+
+    dnf install -y https://download.oracle.com/otn_software/java/sqldeveloper/sqldeveloper-24.3.0-284.2209.noarch.rpm
+    dnf install -y https://download.oracle.com/otn_software/java/sqldeveloper/datamodeler-24.3.0.240.1210-macosx.app.zip
+fi
