@@ -18,7 +18,13 @@ if [[ $MYSQL =~ ^[Ss]$ ]]; then
     dnf install -y https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-8.0.40-1.el9.x86_64.rpm
 
     systemctl enable --now mysqld
-    mysql_secure_installation
+    
+    RT_PASSWD=$(grep "temporary" /var/log/mysqld.log | awk -F ': ' '{ print $2 }')
+
+    echo -e "\nEstablecer el password para root@localhost usando:\n"
+    echo -e "\ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass';\n"
+
+    mysql -u root -p"$RT_PASSWD"
 fi
 
 # PostgreSQL
@@ -36,7 +42,7 @@ if [[ $PSQL =~ ^[Ss]$ ]]; then
 
     # PGAdmin4
     rpm -i https://ftp.postgresql.org/pub/pgadmin/pgadmin4/yum/pgadmin4-redhat-repo-2-1.noarch.rpm
-    dnf install pgadmin4
+    dnf install -y pgadmin4
 fi
 
 # Oracle
