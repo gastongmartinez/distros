@@ -22,7 +22,7 @@ if [[ $MYSQL =~ ^[Ss]$ ]]; then
     RT_PASSWD=$(grep "temporary" /var/log/mysqld.log | awk -F ': ' '{ print $2 }')
 
     echo -e "\nEstablecer el password para root@localhost usando:\n"
-    echo -e "\ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass';\n"
+    echo -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass';\n"
 
     mysql -u root -p"$RT_PASSWD"
 fi
