@@ -100,6 +100,8 @@ nix-env -iA nixpkgs.zsh-syntax-highlighting
 nix-env -iA nixpkgs.fzf
 nix-env -iA nixpkgs.pipenv
 nix-env -iA nixpkgs.lazygit
+nix-env -iA nixpkgs.sqlitebrowser
+nix-env -iA nixpkgs.sqlite-analyzer
 
 
 go install golang.org/x/tools/gopls@latest

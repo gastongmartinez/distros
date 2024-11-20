@@ -9,14 +9,6 @@ fi
 
 export LANG=en_US.UTF-8
 
-# SQLite
-read -rp "Instalar SQLite? (S/N): " LITE
-if [[ $LITE =~ ^[Ss]$ ]]; then
-    dnf install -y sqlite
-    nix-env -iA nixpkgs.sqlitebrowser
-    nix-env -iA nixpkgs.sqlite-analyzer
-fi
-
 # MySQL
 read -rp "Instalar MySQL? (S/N): " MYSQL
 if [[ $MYSQL =~ ^[Ss]$ ]]; then

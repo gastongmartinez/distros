@@ -80,6 +80,7 @@ PAQUETES=(
     'dconf-editor'
     'setroubleshoot'
     'tmux'
+    'sqlite'
 
     #### Redes ####
     'nmap'
