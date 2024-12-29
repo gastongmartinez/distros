@@ -168,6 +168,7 @@ PAQUETES=(
     'mpv'
     'HandBrake'
     'HandBrake-gui'
+    'audacious'
 
     #### Juegos ####
     'chromium-bsu'
