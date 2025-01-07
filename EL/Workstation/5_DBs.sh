@@ -53,8 +53,8 @@ if [[ $ORA =~ ^[Ss]$ ]]; then
 
     /etc/init.d/oracle-free-23ai configure
 
-    dnf install -y https://download.oracle.com/otn_software/java/sqldeveloper/sqldeveloper-24.3.0-284.2209.noarch.rpm
-    dnf install -y https://download.oracle.com/otn_software/java/sqldeveloper/datamodeler-24.3.0.240.1210-1.noarch.rpm
+    dnf install -y https://download.oracle.com/otn_software/java/sqldeveloper/sqldeveloper-24.3.1-347.1826.noarch.rpm
+    dnf install -y https://download.oracle.com/otn_software/java/sqldeveloper/datamodeler-24.3.1.351.0831-1.noarch.rpm
 fi
 
 # MS SQL
