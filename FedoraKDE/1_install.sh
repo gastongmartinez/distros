@@ -172,7 +172,6 @@ PAQUETES=(
 
     #### Juegos ####
     'chromium-bsu'
-    'retroarch'
 
     #### Redes ####
     'nmap'
