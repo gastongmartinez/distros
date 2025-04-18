@@ -155,26 +155,6 @@ PAQUETES=(
     'virt-manager'
     'ebtables'
     'bridge-utils'
-
-    ### Window Managers ###
-    'awesome'
-    'picom'
-    'lxappearance'
-    'jgmenu'
-    'i3lock-fancy'
-    'sway'
-    'sway-notification-center'
-    'swayidle'
-    'swayimg'
-    'swaylock'
-    'waybar'
-    'wdisplays'
-    'wofi'
-    'grimshot'
-    'wlr-randr'
-    'wlogout'
-    'pavucontrol'
-    'pasystray'
 )
  
 for PAQ in "${PAQUETES[@]}"; do
@@ -221,8 +201,6 @@ rm -rf grub2-themes
     echo 'Icon=/usr/share/backgrounds/wallpapers/Fringe/fibonacci3.jpg'
     echo 'SystemAccount=false'
 } >>"/var/lib/AccountsService/users/$USER"
-
-sed -i 's/Name=awesome/Name=Awesome/g' "/usr/share/xsessions/awesome.desktop"
 
 usermod -aG libvirt "$USER"
 usermod -aG kvm "$USER"
