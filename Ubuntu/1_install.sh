@@ -103,6 +103,15 @@ PAQUETES=(
     'krita'
     'blender'
 
+    ### Bases de datos ###
+    'postgresql'
+    #'pgadmin4'
+    'postgis'
+    'mysql-server'
+    'sqlite3'
+    'sqlite3-tools'
+    'sqlitebrowser'
+
     #### DEV ####
     'clang'
     'sassc'
@@ -119,7 +128,14 @@ PAQUETES=(
     'nodejs'
     'npm'
     'yarnpkg'
-    #'pcre-cpp'
+    'pcre2-utils'
+    'pcregrep'
+    'apache2'
+    'php'
+    'libapache2-mod-php'
+    'php-mysql'
+    'dotnet-sdk-8.0'
+    'dotnet-sdk-9.0'
 
     #### Fuentes ####
     'fonts-terminus'
@@ -131,15 +147,6 @@ PAQUETES=(
     'fonts-crosextra-caladea'
     'fonts-crosextra-carlito'
     'ttf-mscorefonts-installer'
-
-    ### Bases de datos ###
-    'postgresql'
-    #'pgadmin4'
-    'postgis'
-    'mysql-server'
-    'sqlite3'
-    'sqlite3-tools'
-    'sqlitebrowser'
 
     ### Cockpit ###
     'cockpit'
