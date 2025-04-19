@@ -162,7 +162,8 @@ PAQUETES=(
 )
  
 for PAQ in "${PAQUETES[@]}"; do
-    nala install "$PAQ" -y
+    #nala install "$PAQ" -y
+    apt install "$PAQ" -y
 done
 
 wget https://corretto.aws/downloads/latest/amazon-corretto-17-x64-linux-jdk.deb
