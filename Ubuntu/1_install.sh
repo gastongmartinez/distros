@@ -65,7 +65,6 @@ PAQUETES=(
     'qalculate-gtk'
     'calibre'
     'foliate'
-    'anki'
     'aspell-es'
     'pandoc'
     'dconf-editor'
@@ -180,6 +179,7 @@ snap install brave
 snap install mysql-workbench-community
 snap install g4music
 snap install retroarch
+snap install anki-desktop
 snap install nvim --classic
 snap install code --classic
 snap install gitkraken --classic
