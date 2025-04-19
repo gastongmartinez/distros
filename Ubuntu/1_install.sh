@@ -69,7 +69,6 @@ PAQUETES=(
     'aspell-es'
     'pandoc'
     'dconf-editor'
-    #'ulauncher'
     'synaptic'
     'stacer'
     'timeshift'
@@ -91,7 +90,6 @@ PAQUETES=(
 
     #### Juegos ####
     'chromium-bsu'
-    'retroarch'
 
     #### Redes ####
     'nmap'
@@ -103,8 +101,8 @@ PAQUETES=(
     #### Diseño ####
     'gimp'
     'inkscape'
-    #'krita'
-    #'blender'
+    'krita'
+    'blender'
 
     #### DEV ####
     'clang'
@@ -122,7 +120,6 @@ PAQUETES=(
     'nodejs'
     'npm'
     'yarnpkg'
-    #'lazygit'
     #'pcre-cpp'
 
     #### Fuentes ####
@@ -138,7 +135,7 @@ PAQUETES=(
 
     ### Bases de datos ###
     'postgresql'
-    'pgadmin4'
+    #'pgadmin4'
     'postgis'
     'mysql-server'
     'sqlite3'
@@ -181,12 +178,10 @@ install lazygit -D -t /usr/local/bin/
 ############################### SNAPS ##########################################
 snap install brave
 snap install mysql-workbench-community
-snap install marktext
 snap install g4music
 snap install nvim --classic
 snap install code --classic
 snap install gitkraken --classic
-snap install obsidian --classic
 snap install blanket --edge
 ################################################################################
 
