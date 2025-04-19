@@ -163,8 +163,19 @@ done
 
 wget https://corretto.aws/downloads/latest/amazon-corretto-17-x64-linux-jdk.deb
 apt install ./amazon-corretto-17-x64-linux-jdk.deb -y
+wget https://corretto.aws/downloads/latest/amazon-corretto-21-x64-linux-jdk.deb
+apt install ./amazon-corretto-21-x64-linux-jdk.deb -y
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 apt install ./google-chrome-stable_current_amd64.deb -y
+wget https://github.com/Ulauncher/Ulauncher/releases/download/5.15.7/ulauncher_5.15.7_all.deb
+apt install ./ulauncher_5.15.7_all.deb -y
+wget https://github.com/helix-editor/helix/releases/download/25.01.1/helix_25.1.1-1_amd64.deb
+apt install ./helix_25.1.1-1_amd64.deb -y
+
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | \grep -Po '"tag_name": *"v\K[^"]*')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+tar xf lazygit.tar.gz lazygit
+install lazygit -D -t /usr/local/bin/
 ################################################################################
 
 ############################### SNAPS ##########################################

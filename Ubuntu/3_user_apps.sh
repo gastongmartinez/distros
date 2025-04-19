@@ -85,13 +85,6 @@ cargo install taplo-cli --locked
 cargo install stylua
 sudo npm install -g neovim prettier bash-language-server vscode-langservers-extracted emmet-ls typescript typescript-language-server yaml-language-server live-server markdownlint markdownlint-cli dockerfile-language-server-nodejs stylelint js-beautify
 
-jgmenu_run init --theme=archlabs_1803
-
-nix-channel --add https://nixos.org/channels/nixpkgs-unstable
-nix-env -iA nixpkgs.ulauncher
-nix-env -iA nixpkgs.helix
-nix-env -iA nixpkgs.lazygit
-
 sleep 5
 
 reboot
