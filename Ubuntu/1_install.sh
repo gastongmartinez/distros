@@ -113,6 +113,7 @@ PAQUETES=(
     'sqlitebrowser'
 
     #### DEV ####
+    'git'
     'clang'
     'sassc'
     'cmake'
