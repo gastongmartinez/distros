@@ -66,6 +66,16 @@ fi
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 sed -i 's/"font"/"powerline"/g' "$HOME/.bashrc"
 
+# Autostart Apps
+if [ ! -d ~/.config/autostart ]; then
+    mkdir -p ~/.config/autostart
+fi
+cp /usr/share/applications/ulauncher.desktop ~/.config/autostart/
+
+# Tema Ulauncher
+mkdir -p ~/.config/ulauncher/user-themes
+git clone https://github.com/Raayib/WhiteSur-Dark-ulauncher.git ~/.config/ulauncher/user-themes/WhiteSur-Dark-ulauncher
+
 # ZSH
 if [ ! -d ~/.local/share/zsh ]; then
     mkdir -p ~/.local/share/zsh
