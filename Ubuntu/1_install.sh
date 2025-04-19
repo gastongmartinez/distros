@@ -179,6 +179,7 @@ install lazygit -D -t /usr/local/bin/
 snap install brave
 snap install mysql-workbench-community
 snap install g4music
+snap install retroarch
 snap install nvim --classic
 snap install code --classic
 snap install gitkraken --classic
