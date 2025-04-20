@@ -46,6 +46,14 @@ make install
 cd "$DIRE" || return
 rm -rf gnome-shell-extension-caffeine
 
+# Tiling assistant
+git clone https://github.com/Leleat/Tiling-Assistant.git
+cd Tiling-Assistant/scripts || return
+chmod +x build.sh
+./build.sh -i
+cd "$DIRE" || return
+rm -rf Tiling-Assistant
+
 sleep 2
 
 reboot
