@@ -38,6 +38,7 @@ dconf write /org/gnome/shell/extensions/dash-to-dock/show-apps-at-top true
 dconf write /org/gnome/shell/extensions/dash-to-dock/show-mounts-only-mounted true
 dconf write /org/gnome/shell/extensions/dash-to-dock/show-mounts-network false
 dconf write /org/gnome/shell/extensions/blur-my-shell/dash-to-dock/blur false
+dconf write /org/gnome/shell/favorite-apps "['org.gnome.Settings.desktop', 'thunar.desktop', 'google-chrome.desktop', 'brave_brave.desktop', 'firefox_firefox.desktop', 'thunderbird_thunderbird.desktop', 'Alacritty.desktop', 'code_code.desktop', 'virt-manager.desktop', 'libreoffice-calc.desktop', 'qalculate-gtk.desktop', 'audacious.desktop', 'fr.handbrake.ghb.desktop']"
 
 #############################################################################################################################################
 # Establecer fuentes
