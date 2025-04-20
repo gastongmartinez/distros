@@ -80,6 +80,7 @@ PAQUETES=(
     'python3-vlc'
     'mpv'
     'handbrake'
+    'audacious'
 
     #### Codecs ####
     'x264'
