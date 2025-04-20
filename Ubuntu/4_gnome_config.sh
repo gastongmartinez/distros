@@ -15,8 +15,7 @@ fi
 
 ############################################## Extensiones ##################################################################################
 # Activar extensiones
-dconf write /org/gnome/shell/enabled-extensions "/org/gnome/shell/enabled-extensions
-  ['arcmenu@arcmenu.com', 'blur-my-shell@aunetx', 'caffeine@patapon.info', 'systemd-manager@hardpixel.eu', 'Vitals@CoreCoding.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'ubuntu-dock@ubuntu.com', 'tiling-assistant@ubuntu.com', 'no-overview@fthx']"
+dconf write /org/gnome/shell/enabled-extensions "['arcmenu@arcmenu.com', 'blur-my-shell@aunetx', 'caffeine@patapon.info', 'systemd-manager@hardpixel.eu', 'Vitals@CoreCoding.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'ubuntu-dock@ubuntu.com', 'tiling-assistant@ubuntu.com', 'no-overview@fthx']"
 dconf write /org/gnome/shell/disabled-extensions "['ding@rastersoft.com']"
 
 # ArcMenu
