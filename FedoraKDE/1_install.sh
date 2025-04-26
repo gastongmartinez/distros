@@ -38,7 +38,7 @@ dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-"$(
 dnf install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-"$(rpm -E %fedora)".noarch.rpm -y
 
 # PGAdmin4
-# rpm -i https://ftp.postgresql.org/pub/pgadmin/pgadmin4/yum/pgadmin4-fedora-repo-2-1.noarch.rpm
+rpm -i https://ftp.postgresql.org/pub/pgadmin/pgadmin4/yum/pgadmin4-fedora-repo-2-1.noarch.rpm
 
 # MESA
 read -rp "Cambiar drivers de video a MESA Freeworld? (S/N): " MESA
@@ -225,7 +225,7 @@ PAQUETES=(
 
     ### Bases de datos ###
     'postgresql-server'
-    #'pgadmin4'
+    'pgadmin4'
     'postgis'
     'postgis-client'
     'postgis-utils'
