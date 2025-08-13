@@ -60,6 +60,8 @@ mv ./widgets@aylur ~/.local/share/gnome-shell/extensions/widgets@aylur
 cd "$DIRE" || return
 rm -rf gnome-extensions
 
+flatpak --user install flathub com.mattjakeman.ExtensionManager -y
+
 sleep 2
 
 reboot

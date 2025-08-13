@@ -43,6 +43,8 @@ PAQUETES=(
 
     #### Sistema ####
     'flatpak'
+    'hx'
+    'neovim'
     'tldr'
     'lsd'
     'unrar-free'
@@ -66,6 +68,7 @@ PAQUETES=(
     'gettext'
     'stacer'
     'tmux'
+    'corectrl'
 
     #### Multimedia ####
     'vlc'
@@ -105,6 +108,11 @@ PAQUETES=(
     'nodejs'
     'npm'
     'yarnpkg'
+    'lazigit'
+    #'apache2'
+    #ver php
+    #ver dotnet
+    #ver powershell
 
     #### Fuentes ####
     'fonts-terminus'
@@ -168,6 +176,8 @@ if [[ $GAPPS =~ ^[Ss]$ ]]; then
 fi
 
 #'qalculate-gtk'
+
+#Ver apps KDE
 
 wget https://corretto.aws/downloads/latest/amazon-corretto-21-x64-linux-jdk.deb
 wget https://github.com/Ulauncher/Ulauncher/releases/download/5.15.7/ulauncher_5.15.7_all.deb
