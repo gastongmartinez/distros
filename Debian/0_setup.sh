@@ -40,7 +40,7 @@ apt install extrepo -y
 extrepo enable librewolf
 
 # Google Chrome
-wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
+wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | gpg --dearmor | tee /etc/apt/trusted.gpg.d/google.gpg >/dev/null
 echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | tee /etc/apt/sources.list.d/google-chrome.list
 
 apt update
