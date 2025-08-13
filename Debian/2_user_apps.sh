@@ -98,6 +98,7 @@ cd WhiteSur-icon-theme || return
 cd ..
 rm -rf WhiteSur-icon-theme
 
+# LSPs, Linters. tools, etc
 go install golang.org/x/tools/gopls@latest
 go install golang.org/x/tools/cmd/goimports@latest
 go install github.com/go-delve/delve/cmd/dlv@latest
@@ -110,14 +111,17 @@ cargo install taplo-cli --locked
 cargo install stylua
 sudo npm install -g neovim prettier bash-language-server vscode-langservers-extracted emmet-ls typescript typescript-language-server yaml-language-server live-server markdownlint markdownlint-cli dockerfile-language-server-nodejs stylelint js-beautify
 
+# ZelliJ
 wget https://github.com/zellij-org/zellij/releases/download/v0.43.1/zellij-x86_64-unknown-linux-musl.tar.gz
 tar -xvf zellij*.tar.gz
 chmod +x zellij
 rm zellij-x86_64-unknown-linux-musl.tar.gz
 mv zellij "$HOME/.local/bin/"
 
+# Atuin
 curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
 
+# Zed Editor
 curl -f https://zed.dev/install.sh | sh
 
 sleep 5
