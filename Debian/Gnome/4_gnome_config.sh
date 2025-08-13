@@ -23,18 +23,12 @@ cd WhiteSur-gtk-theme || return
 sudo ./tweaks.sh -g -b "/usr/share/backgrounds/wallpapers/Landscapes/landscapes 01.jpg"
 cd ..
 
-git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git
-cd WhiteSur-icon-theme || return
-./install.sh -t grey
-cd ..
-
 git clone https://github.com/vinceliuice/WhiteSur-cursors.git
 cd WhiteSur-cursors || return
 ./install.sh
 cd ..
 
 rm -rf WhiteSur-gtk-theme
-rm -rf WhiteSur-icon-theme
 rm -rf WhiteSur-cursors
 #############################################################################################################################################
 
