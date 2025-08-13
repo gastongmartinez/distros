@@ -135,28 +135,6 @@ PAQUETES=(
     'virt-manager'
     'ebtables'
     'bridge-utils'
-
-    #### Window Managers ####
-    'awesome'
-    'nitrogen'
-    'feh'
-    'picom'
-    'lxappearance'
-    'jgmenu'
-    'i3lock'
-    'i3lock-fancy'
-    'sway'
-    'sway-notification-center'
-    'swayidle'
-    'swayimg'
-    'swaykbdd'
-    'swaylock'
-    'grimshot'
-    'waybar'
-    'wofi'
-    'wlr-randr'
-    'wlogout'
-    'pavucontrol'
 )
 
 for PAQ in "${PAQUETES[@]}"; do
@@ -204,9 +182,6 @@ mv -f wallpapers/ "/usr/share/backgrounds/"
 #################################################################################
 
 #################################################################################
-
-sed -i "s/Name=awesome/Name=Awesome/g" "/usr/share/xsessions/awesome.desktop"
-
 usermod -aG libvirt "$USER"
 usermod -aG kvm "$USER"
 
