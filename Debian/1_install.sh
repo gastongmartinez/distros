@@ -17,13 +17,6 @@ PAQUETES=(
     'tlp-rdw'
     'powertop'
 
-    #### Gnome ####
-    'gnome-feeds'
-    'gnome-shell-extension-dashtodock'
-    'gnome-shell-extension-caffeine'
-    'gnome-shell-extension-tiling-assistant'
-    'gnome-commander'
-
     #### WEB ####
     'google-chrome-stable'
     'librewolf'
@@ -175,6 +168,29 @@ for PAQ in "${PAQUETES[@]}"; do
     nala install "$PAQ" -y
 done
 
+#### Gnome Apps####
+read -rp "Instalar GNOME Apps? (S/N): " GAPPS
+if [[ $GAPPS =~ ^[Ss]$ ]]; then
+    GNAPPS=(
+        'gnome-feeds'
+        'gnome-shell-extension-dashtodock'
+        'gnome-shell-extension-caffeine'
+        'gnome-shell-extension-tiling-assistant'
+        'gnome-commander'
+    )
+
+    for PAQ in "${GNAPPS[@]}"; do
+        nala install "$PAQ" -y
+    done
+
+    # Icono
+    {
+        echo '[User]'
+        echo 'Icon=/usr/share/backgrounds/wallpapers/Fringe/fibonacci3.jpg'
+        echo 'SystemAccount=false'
+    } >>"/var/lib/AccountsService/users/$USER"
+fi
+
 wget https://corretto.aws/downloads/latest/amazon-corretto-17-x64-linux-jdk.deb
 wget https://github.com/Ulauncher/Ulauncher/releases/download/5.15.2/ulauncher_5.15.2_all.deb
 apt install ./amazon-corretto-17-x64-linux-jdk.deb -y
@@ -188,12 +204,7 @@ mv -f wallpapers/ "/usr/share/backgrounds/"
 #################################################################################
 
 #################################################################################
-# Icono
-{
-    echo '[User]'
-    echo 'Icon=/usr/share/backgrounds/wallpapers/Fringe/fibonacci3.jpg'
-    echo 'SystemAccount=false'
-} >>"/var/lib/AccountsService/users/$USER"
+
 sed -i "s/Name=awesome/Name=Awesome/g" "/usr/share/xsessions/awesome.desktop"
 
 usermod -aG libvirt "$USER"
