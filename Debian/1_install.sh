@@ -56,7 +56,6 @@ PAQUETES=(
     'powerline'
     'emacs'
     'flameshot'
-    'klavaro'
     'fd-find'
     'fzf'
     'silversearcher-ag'
@@ -173,9 +172,27 @@ if [[ $GAPPS =~ ^[Ss]$ ]]; then
     } >>"/var/lib/AccountsService/users/$USER"
 fi
 
-#'qalculate-gtk'
+#### KDE Apps####
+read -rp "Instalar KDE Apps? (S/N): " KAPPS
+if [[ $KAPPS =~ ^[Ss]$ ]]; then
+    KDEAPPS=(
+        'ksystemlog'
+        'kcolorchooser'
+        'filelight'
+        'lokalize'
+        'kompare'
+        'kruler'
+        'kalarm'
+        'ktouch'
+        'krusader'
+        'artikulate'
+        'qalculate-qt'
+    )
 
-#Ver apps KDE
+    for PAQ in "${KDEAPPS[@]}"; do
+        nala install "$PAQ" -y
+    done
+fi
 
 wget https://corretto.aws/downloads/latest/amazon-corretto-21-x64-linux-jdk.deb
 wget https://github.com/Ulauncher/Ulauncher/releases/download/5.15.7/ulauncher_5.15.7_all.deb
