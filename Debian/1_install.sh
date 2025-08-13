@@ -169,10 +169,10 @@ fi
 
 #'qalculate-gtk'
 
-wget https://corretto.aws/downloads/latest/amazon-corretto-17-x64-linux-jdk.deb
-wget https://github.com/Ulauncher/Ulauncher/releases/download/5.15.2/ulauncher_5.15.2_all.deb
-apt install ./amazon-corretto-17-x64-linux-jdk.deb -y
-apt install ./ulauncher_5.15.2_all.deb -y
+wget https://corretto.aws/downloads/latest/amazon-corretto-21-x64-linux-jdk.deb
+wget https://github.com/Ulauncher/Ulauncher/releases/download/5.15.7/ulauncher_5.15.7_all.deb
+apt install ./amazon-corretto-21-x64-linux-jdk.deb -y
+apt install ./ulauncher_5.15.7_all.deb -y
 ###############################################################################
 
 ################################ Wallpapers #####################################
@@ -198,8 +198,8 @@ cd .. || return
 #################################################################################
 
 rm -rf grub2-themes
-rm amazon-corretto-17-x64-linux-jdk.deb
-rm ulauncher_5.15.2_all.deb
+rm amazon-corretto-21-x64-linux-jdk.deb
+rm ulauncher_5.15.7_all.deb
 
 sleep 2
 
