@@ -124,6 +124,9 @@ curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
 # Zed Editor
 curl -f https://zed.dev/install.sh | sh
 
+# Inicializacion MariaDB
+sudo mariadb-secure-installation
+
 sleep 5
 
 sudo reboot

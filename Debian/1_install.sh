@@ -106,8 +106,10 @@ PAQUETES=(
     'npm'
     'yarnpkg'
     'lazigit'
-    #'apache2'
-    #ver php
+    'apache2'
+    'php8.4'
+    'libapache2-mod-php8.4'
+    'php8.4-mysql'
     #ver dotnet
     #ver powershell
 
@@ -213,6 +215,8 @@ usermod -aG libvirt "$USER"
 usermod -aG kvm "$USER"
 
 systemctl enable --now cockpit.socket
+systemctl enable --now apache2
+systemctl enable --now mariadb
 firewall-cmd --add-service=cockpit
 firewall-cmd --add-service=cockpit --permanent
 #################################################################################
