@@ -196,8 +196,10 @@ fi
 
 wget https://corretto.aws/downloads/latest/amazon-corretto-21-x64-linux-jdk.deb
 wget https://github.com/Ulauncher/Ulauncher/releases/download/5.15.7/ulauncher_5.15.7_all.deb
+wget https://download2.gluonhq.com/scenebuilder/24.0.1/install/linux/SceneBuilder-24.0.1.deb
 apt install ./amazon-corretto-21-x64-linux-jdk.deb -y
 apt install ./ulauncher_5.15.7_all.deb -y
+apt install ./SceneBuilder-24.0.1.deb -y
 ###############################################################################
 
 ################################ Wallpapers #####################################
@@ -225,6 +227,7 @@ cd .. || return
 rm -rf grub2-themes
 rm amazon-corretto-21-x64-linux-jdk.deb
 rm ulauncher_5.15.7_all.deb
+rm SceneBuilder-24.0.1.deb
 
 sleep 2
 
