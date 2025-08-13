@@ -110,7 +110,7 @@ cargo install taplo-cli --locked
 cargo install stylua
 sudo npm install -g neovim prettier bash-language-server vscode-langservers-extracted emmet-ls typescript typescript-language-server yaml-language-server live-server markdownlint markdownlint-cli dockerfile-language-server-nodejs stylelint js-beautify
 
-wget https://github.com/zellij-org/zellij/releases/download/v0.42.2/zellij-x86_64-unknown-linux-musl.tar.gz
+wget https://github.com/zellij-org/zellij/releases/download/v0.43.1/zellij-x86_64-unknown-linux-musl.tar.gz
 tar -xvf zellij*.tar.gz
 chmod +x zellij
 rm zellij-x86_64-unknown-linux-musl.tar.gz
