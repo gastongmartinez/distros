@@ -43,7 +43,6 @@ PAQUETES=(
 
     #### Sistema ####
     'flatpak'
-    'gnome-software-plugin-flatpak'
     'tldr'
     'lsd'
     'unrar-free'
@@ -61,11 +60,9 @@ PAQUETES=(
     'fd-find'
     'fzf'
     'silversearcher-ag'
-    'qalculate-gtk'
     'calibre'
     'foliate'
     'pandoc'
-    'dconf-editor'
     'gettext'
     'stacer'
     'tmux'
@@ -80,26 +77,23 @@ PAQUETES=(
 
     #### Juegos ####
     'chromium-bsu'
-    'retroarch'
 
     #### Redes ####
     'nmap'
     'wireshark'
-    'wireshark-gtk'
     'firewall-applet'
 
     #### Diseño ####
     'gimp'
     'inkscape'
-    #'krita'
-    #'blender'
+    'krita'
+    'blender'
 
     #### DEV ####
     'clang'
     'cmake'
     'meson'
     'pipenv'
-    #'python3-spyder'
     'python3-pip'
     'pipx'
     'filezilla'
@@ -134,6 +128,7 @@ PAQUETES=(
     'cockpit'
     'cockpit-sosreport'
     'cockpit-machines'
+    'cockpit-networkmanager'
     'cockpit-podman'
 
     #### Virtualizacion ####
@@ -177,6 +172,9 @@ if [[ $GAPPS =~ ^[Ss]$ ]]; then
         'gnome-shell-extension-caffeine'
         'gnome-shell-extension-tiling-assistant'
         'gnome-commander'
+        'gnome-software-plugin-flatpak'
+        'dconf-editor'
+        'qalculate-gtk'
     )
 
     for PAQ in "${GNAPPS[@]}"; do
@@ -190,6 +188,8 @@ if [[ $GAPPS =~ ^[Ss]$ ]]; then
         echo 'SystemAccount=false'
     } >>"/var/lib/AccountsService/users/$USER"
 fi
+
+#'qalculate-gtk'
 
 wget https://corretto.aws/downloads/latest/amazon-corretto-17-x64-linux-jdk.deb
 wget https://github.com/Ulauncher/Ulauncher/releases/download/5.15.2/ulauncher_5.15.2_all.deb
