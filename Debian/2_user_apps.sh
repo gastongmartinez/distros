@@ -37,8 +37,8 @@ flatpak --user install flathub com.axosoft.GitKraken -y
 flatpak --user install flathub io.podman_desktop.PodmanDesktop -y
 flatpak --user install flathub org.libretro.RetroArch -y
 flatpak --user install flathub io.dbeaver.DBeaverCommunity -y
-#flatpak --user install flathub org.mozilla.firefox -y
-#flatpak --user install flathub org.libreoffice.LibreOffice -y
+flatpak --user install flathub org.mozilla.firefox -y
+flatpak --user install flathub org.libreoffice.LibreOffice -y
 
 # Doom Emacs
 read -rp "Instalar Doom Emacs? (S/N): " DOOM
