@@ -50,6 +50,8 @@ apt remove firefox-esr -y
 apt remove libreoffice-base-core -y
 apt remove libreoffice-common -y
 apt remove libreoffice-style-colibre -y
+apt remove kmail -y
+apt remove konqueror -y
 apt autoremove -y
 
 
