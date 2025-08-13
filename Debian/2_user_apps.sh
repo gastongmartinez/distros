@@ -110,6 +110,10 @@ pipx install autopep8
 cargo install taplo-cli --locked
 cargo install stylua
 sudo npm install -g neovim prettier bash-language-server vscode-langservers-extracted emmet-ls typescript typescript-language-server yaml-language-server live-server markdownlint markdownlint-cli dockerfile-language-server-nodejs stylelint js-beautify
+wget https://github.com/artempyanykh/marksman/releases/download/2024-12-18/marksman-linux-x64
+mv marksman-linux-x64 marksman
+chmod +x marksman
+mv marksman "$HOME/.local/bin/"
 
 # ZelliJ
 wget https://github.com/zellij-org/zellij/releases/download/v0.43.1/zellij-x86_64-unknown-linux-musl.tar.gz
