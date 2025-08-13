@@ -55,6 +55,3 @@ apt autoremove -y
 
 # Configuracion de servidores
 nala fetch
-
-# Nix
-sh <(curl -L https://nixos.org/nix/install) --daemon
