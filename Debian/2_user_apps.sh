@@ -122,5 +122,5 @@ curl -f https://zed.dev/install.sh | sh
 
 sleep 5
 
-reboot
+sudo reboot
 
