@@ -106,7 +106,7 @@ PAQUETES=(
 
     ### Bases de datos ###
     'postgresql'
-    #'pgadmin4'
+    'pgadmin4'
     'postgis'
     'mysql-server'
     'sqlite3'
