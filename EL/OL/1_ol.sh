@@ -30,3 +30,9 @@ dnf install -y git
 dnf install -y https://download.oracle.com/otn-pub/otn_software/db-free/oracle-database-free-23ai-23.8-1.el9.x86_64.rpm
 
 /etc/init.d/oracle-free-23ai configure
+
+/usr/lib/systemd/systemd-sysv-install enable oracle-free-23ai
+
+systemctl start oracle-free-23ai
+
+firewall-cmd --permanent --zone=public --add-port=1521/tcp
