@@ -26,6 +26,7 @@ dnf install -y mc
 dnf install -y tmux
 dnf install -y git
 dnf install -y clang
+dnf install -y lldb
 
 # Oracle 23ai
 dnf install -y https://download.oracle.com/otn-pub/otn_software/db-free/oracle-database-free-23ai-23.8-1.el9.x86_64.rpm
