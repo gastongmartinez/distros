@@ -68,6 +68,9 @@ if [[ $MS =~ ^[Ss]$ ]]; then
     firewall-cmd --zone=public --add-port=1433/tcp --permanent
     firewall-cmd --reload
 
+    curl https://packages.microsoft.com/config/rhel/9/prod.repo | tee /etc/yum.repos.d/mssql-release.repo
+    dnf install -y mssql-tools18 unixODBC-devel
+
     wget --output-document azuredatastudio.rpm https://azuredatastudio-update.azurewebsites.net/latest/linux-rpm-x64/stable
     dnf install -y ./azuredatastudio.rpm
     rm ./*.rpm
