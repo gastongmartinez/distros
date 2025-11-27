@@ -137,7 +137,7 @@ PAQUETES=(
     'libapache2-mod-php'
     'php-mysql'
     'dotnet-sdk-8.0'
-    'dotnet-sdk-9.0'
+    'dotnet-sdk-10.0'
 
     #### Fuentes ####
     'fonts-terminus'
