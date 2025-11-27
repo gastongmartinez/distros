@@ -190,6 +190,11 @@ snap install nvim --classic
 snap install code --classic
 snap install gitkraken --classic
 snap install blanket --edge
+snap install pycharm-community --classic
+snap install intellij-idea-community --classic
+snap install datagrip --classic
+snap install rider --classic
+snap install rustrover --classic
 ################################################################################
 
 ################################ Wallpapers #####################################
