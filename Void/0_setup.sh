@@ -43,18 +43,16 @@ if [[ $USR2 =~ ^[Ss]$ ]]; then
     usermod -aG tty,lp,audio,video,cdrom,optical,mail,storage,scanner,network,kvm,input,plugdev,usbmon "$USUARIO2"
 fi
 
-
 # KDE
 xbps-install -y xorg
-xbps-install -y kde5
-xbps-install -y sddm
+xbps-install -y kde-plasma
+xbps-install -y kde-baseapps
 xbps-install -y dbus
 xbps-install -y konsole
 xbps-install -y okular
 xbps-install -y dolphin
 xbps-install -y dolphin-plugins
 xbps-install -y ark
-xbps-install -y kate5
 xbps-install -y spectacle
 xbps-install -y kwallet
 xbps-install -y kcalc
@@ -62,7 +60,6 @@ xbps-install -y kfind
 xbps-install -y ksystemlog
 xbps-install -y kcolorchooser
 xbps-install -y filelight
-xbps-install -y yakuake
 xbps-install -y khelpcenter
 xbps-install -y partitionmanager
 xbps-install -y lokalize
