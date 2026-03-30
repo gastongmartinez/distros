@@ -12,16 +12,16 @@ if [ ! -d ~/Apps ]; then
 fi
 
 # NerdFonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip
 unzip JetBrainsMono.zip -d ~/.local/share/fonts
 fc-cache -f -v
 rm JetBrainsMono.zip
 
 # Cascadia code
-wget https://github.com/microsoft/cascadia-code/releases/download/v2111.01/CascadiaCode-2111.01.zip
-unzip CascadiaCode-2111.01.zip -d ~/.local/share/fonts
+wget https://github.com/microsoft/cascadia-code/releases/download/v2407.24/CascadiaCode-2407.24.zip
+unzip CascadiaCode-2407.24.zip -d ~/.local/share/fonts
 fc-cache -f -v
-rm CascadiaCode-2111.01.zip
+rm CascadiaCode-2407.24.zip
 
 # MS Fonts
 git clone https://github.com/void-linux/void-packages
