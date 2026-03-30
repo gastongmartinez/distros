@@ -89,8 +89,6 @@ PAQUETES=(
     'flatpak'
 
     #### Multimedia ####
-    'vlc'
-    'python3-vlc'
     'mpv'
     'ffmpeg'
     'mesa-vdpau'
@@ -176,26 +174,6 @@ PAQUETES=(
     'libguestfs'
     'virtualbox-ose'
     'virtualbox-ose-guest'
-
-    ### Window Managers ###
-    'qtile'
-    'awesome'
-    'picom'
-    'lxappearance'
-    'xorg-server-xephyr'
-    'jgmenu'
-    'i3lock-fancy'
-    'sway'
-    'SwayNotificationCenter'
-    'Waybar'
-    'grimshot'
-    'swaybg'
-    'swayidle'
-    'swayimg'
-    'swaylock'
-    'wofi'
-    'wlr-randr'
-    'wlogout'
 
     ### Audio ###
     'pulseaudio'
