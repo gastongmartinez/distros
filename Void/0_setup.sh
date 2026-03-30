@@ -27,8 +27,7 @@ xbps-install -y shellcheck
 
 # Usuario
 read -rp "Crear usuario? (S/N): " USR
-if [ "$USR" == 'S' ]; 
-then
+if [[ $USR =~ ^[Ss]$ ]]; then
     echo -e "\nEl usuario será incluido en el grupo wheel.\n"
     read -rp "Ingresar el nombre del usuario: " USUARIO
     read -rp "Ingresar el nombre completo del usuario: " NOMBRE
@@ -37,6 +36,13 @@ then
     passwd "$USUARIO"
     usermod -aG tty,lp,audio,video,cdrom,optical,mail,storage,scanner,network,kvm,input,plugdev,usbmon "$USUARIO"
 fi
+
+read -rp "Agregar usuario existente a grupos necesarios? (S/N): " USR2
+if [[ $USR2 =~ ^[Ss]$ ]]; then
+    read -rp "Ingresar el nombre del usuario: " USUARIO2
+    usermod -aG tty,lp,audio,video,cdrom,optical,mail,storage,scanner,network,kvm,input,plugdev,usbmon "$USUARIO2"
+fi
+
 
 # KDE
 xbps-install -y xorg
