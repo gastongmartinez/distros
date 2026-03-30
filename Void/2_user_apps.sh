@@ -52,6 +52,7 @@ flatpak --user install flathub io.podman_desktop.PodmanDesktop -y
 flatpak --user install flathub com.brave.Browser -y
 flatpak --user install flathub com.google.Chrome -y
 flatpak --user install flathub io.gitlab.librewolf-community -y
+flatpak --user install flathub io.dbeaver.DBeaverCommunity -y
 
 # Tmux Plugin Manager
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
