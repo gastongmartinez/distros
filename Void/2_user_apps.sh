@@ -137,14 +137,6 @@ fi
 # Zed Editor
 curl -f https://zed.dev/install.sh | sh
 
-# Nix Packages
-export NIXPKGS_ALLOW_UNFREE=1
-nix-channel --add https://nixos.org/channels/nixos-25.11 nixpkgs
-nix-channel --update
-nix-env -iA nixpkgs.pgadmin4
-nix-env -iA nixpkgs.mysql-workbench
-nix-env -iA nixpkgs.sqlite-analyzer
-
 sleep 5
 
 sudo reboot

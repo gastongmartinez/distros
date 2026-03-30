@@ -212,15 +212,6 @@ ln -s /etc/sv/cronie /var/service
 ln -s /etc/sv/cupsd /var/service
 #################################################################################
 
-############################## Nix Package Manager ##############################
-xbps-install -y nix
-ln -s /etc/sv/nix-daemon /var/service/
-# shellcheck source=/dev/null
-source /etc/profile
-chown "$USER" "/nix/var/nix/profiles/per-user/$USER"
-chown "$USER" "/nix/var/nix/gcroots/per-user/$USER"
-#################################################################################
-
 sleep 2
 
 reboot
