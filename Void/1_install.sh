@@ -160,8 +160,6 @@ PAQUETES=(
     'virt-manager'
     'bridge-utils'
     'libguestfs'
-    'virtualbox-ose'
-    'virtualbox-ose-guest'
 
     ### Audio ###
     'pulseaudio'
@@ -202,7 +200,6 @@ mv -f wallpapers/ "/usr/share/backgrounds/"
 
 usermod -aG libvirt "$USER"
 usermod -aG kvm "$USER"
-usermod -aG vboxusers "$USER"
 
 ufw enable
 ufw allow ssh
