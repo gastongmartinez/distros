@@ -182,14 +182,14 @@ done
 #################################################################################
 
 ################################## JDK ##########################################
-wget https://corretto.aws/downloads/latest/amazon-corretto-17-x64-linux-jdk.tar.gz
-tar -xf amazon-corretto-17-x64-linux-jdk.tar.gz
-rm ./amazon-corretto-17-x64-linux-jdk.tar.gz
+wget https://corretto.aws/downloads/latest/amazon-corretto-25-x64-linux-jdk.tar.gz
+tar -xf amazon-corretto-25-x64-linux-jdk.tar.gz
+rm ./amazon-corretto-25-x64-linux-jdk.tar.gz
 mkdir /usr/lib/jvm # Verificar si existe
-mv amazon* /usr/lib/jvm/java-17-amazon-corretto
+mv amazon* /usr/lib/jvm/java-25-amazon-corretto
 
 {
-    echo 'export JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto'
+    echo 'export JAVA_HOME=/usr/lib/jvm/java-25-amazon-corretto'
     echo 'export PATH="$JAVA_HOME"/bin:"$PATH"'
 } >>/etc/profile.d/corretto.sh
 #################################################################################
