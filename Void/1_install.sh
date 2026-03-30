@@ -59,10 +59,8 @@ PAQUETES=(
     '7zip-unrar'
     'unrar'
     'alacritty'
-    'kitty'
     'htop'
     'bpytop'
-    'neofetch'
     'lshw'
     'gtk-lshw'
     'neovim'
@@ -91,13 +89,8 @@ PAQUETES=(
     #### Multimedia ####
     'mpv'
     'ffmpeg'
-    'mesa-vdpau'
     'mesa-vaapi'
-    'gst-plugins-bad1'
-    'gst-plugins-base1'
-    'gst-plugins-good1'
     'gst-libav'
-    'lame'
 
     #### Juegos ####
     'chromium-bsu'
@@ -130,7 +123,6 @@ PAQUETES=(
     'python3-pipenv'
     'python3-pip'
     'python3-yamllint'
-    'python3-nose'
     'python3-lsp-server'
     'black'
     'pyright'
@@ -154,11 +146,8 @@ PAQUETES=(
     'font-awesome5'
     'font-awesome6'
     'fonts-roboto-ttf'
-    'dejavu-fonts-ttf'
     'font-fira-ttf'
     'font-firacode'
-    'font-crosextra-caladea-ttf'
-    'font-crosextra-carlito-ttf'
 
     ### Bases de datos ###
     'postgresql'
@@ -169,7 +158,6 @@ PAQUETES=(
 
     ### Virtualizacion ###
     'virt-manager'
-    'virt-manager-tools'
     'bridge-utils'
     'libguestfs'
     'virtualbox-ose'
@@ -177,7 +165,6 @@ PAQUETES=(
 
     ### Audio ###
     'pulseaudio'
-    'pulseaudio-utils'
     'pulsemixer'
     'alsa-plugins-pulseaudio'
     'pavucontrol'
@@ -198,7 +185,7 @@ done
 wget https://corretto.aws/downloads/latest/amazon-corretto-17-x64-linux-jdk.tar.gz
 tar -xf amazon-corretto-17-x64-linux-jdk.tar.gz
 rm ./amazon-corretto-17-x64-linux-jdk.tar.gz
-mkdir /usr/lib/jvm
+mkdir /usr/lib/jvm # Verificar si existe
 mv amazon* /usr/lib/jvm/java-17-amazon-corretto
 
 {
@@ -212,8 +199,6 @@ echo -e "\nInstalando wallpapers..."
 git clone https://github.com/gastongmartinez/wallpapers.git
 mv -f wallpapers/ "/usr/share/backgrounds/"
 #################################################################################
-
-sed -i 's/Name=awesome/Name=Awesome/g' "/usr/share/xsessions/awesome.desktop"
 
 usermod -aG libvirt "$USER"
 usermod -aG kvm "$USER"
