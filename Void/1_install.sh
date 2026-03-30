@@ -183,7 +183,9 @@ done
 wget https://corretto.aws/downloads/latest/amazon-corretto-25-x64-linux-jdk.tar.gz
 tar -xf amazon-corretto-25-x64-linux-jdk.tar.gz
 rm ./amazon-corretto-25-x64-linux-jdk.tar.gz
-mkdir /usr/lib/jvm # Verificar si existe
+if [ ! -d /usr/lib/jvm ]; then
+    mkdir /usr/lib/jvm
+fi
 mv amazon* /usr/lib/jvm/java-25-amazon-corretto
 
 {
