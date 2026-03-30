@@ -47,14 +47,14 @@ fi
 xbps-install -y xorg
 xbps-install -y kde-plasma
 xbps-install -y kde-baseapps
-xbps-install -y dbus
+xbps-install -y dbus # Borrar?
 xbps-install -y konsole
 xbps-install -y okular
 xbps-install -y dolphin
 xbps-install -y dolphin-plugins
 xbps-install -y ark
 xbps-install -y spectacle
-xbps-install -y kwallet
+xbps-install -y kwallet # Borrar?
 xbps-install -y kcalc
 xbps-install -y kfind
 xbps-install -y ksystemlog
@@ -107,9 +107,9 @@ xbps-install -y NetworkManager-vpnc
 xbps-install -y NetworkManager-l2tp
 
 # XDG
-xbps-install -y xdg-user-dirs
+xbps-install -y xdg-user-dirs # Borrar?
 xbps-install -y xdg-user-dirs-gtk
-xbps-install -y xdg-utils
+xbps-install -y xdg-utils # Borrar?
 
 # Logs
 xbps-install -y socklog-void
@@ -129,7 +129,9 @@ xbps-reconfigure -f "linux$KVER"
 ln -s /etc/sv/dbus /var/service
 ln -s /etc/sv/elogind /var/service
 ln -s /etc/sv/NetworkManager /var/service
-ln -s /etc/sv/sshd /var/service
+if [ ! -f /var/service/sshd ]; then
+    ln -s /etc/sv/sshd /var/service
+fi
 ln -s /etc/sv/socklog-unix /var/service
 ln -s /etc/sv/nanoklogd /var/service
 ln -s /etc/sv/sddm /var/service
