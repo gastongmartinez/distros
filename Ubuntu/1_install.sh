@@ -44,7 +44,7 @@ PAQUETES=(
     'autofs'
 
     #### Sistema ####
-    'tldr'
+    ###'tldr'
     'lsd'
     'corectrl'
     'p7zip'
@@ -53,7 +53,6 @@ PAQUETES=(
     'kitty'
     'htop'
     'bpytop'
-    'neofetch'
     'lshw-gtk'
     'powerline'
     'emacs'
@@ -95,7 +94,7 @@ PAQUETES=(
     'nmap'
     'nmapsi4'
     'wireshark'
-    'wireshark-gtk'
+    ###'wireshark-gtk'
     'gufw'
 
     #### Diseño ####
