@@ -47,20 +47,16 @@ fi
 xbps-install -y xorg
 xbps-install -y kde-plasma
 xbps-install -y kde-baseapps
-xbps-install -y dbus # Borrar?
-xbps-install -y konsole
 xbps-install -y okular
-xbps-install -y dolphin
 xbps-install -y dolphin-plugins
 xbps-install -y ark
 xbps-install -y spectacle
-xbps-install -y kwallet # Borrar?
+xbps-install -y kwallet
 xbps-install -y kcalc
 xbps-install -y kfind
 xbps-install -y ksystemlog
 xbps-install -y kcolorchooser
 xbps-install -y filelight
-xbps-install -y khelpcenter
 xbps-install -y partitionmanager
 xbps-install -y lokalize
 xbps-install -y kolourpaint
@@ -107,9 +103,7 @@ xbps-install -y NetworkManager-vpnc
 xbps-install -y NetworkManager-l2tp
 
 # XDG
-xbps-install -y xdg-user-dirs # Borrar?
 xbps-install -y xdg-user-dirs-gtk
-xbps-install -y xdg-utils # Borrar?
 
 # Logs
 xbps-install -y socklog-void
