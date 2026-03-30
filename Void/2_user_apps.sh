@@ -47,28 +47,11 @@ flatpak --user install flathub fr.handbrake.ghb -y
 flatpak --user install flathub io.github.shiftey.Desktop -y
 flatpak --user install flathub net.ankiweb.Anki -y
 flatpak --user install flathub com.github.tchx84.Flatseal -y
-flatpak --user install flathub com.github.neithern.g4music -y
 flatpak --user install flathub com.axosoft.GitKraken -y
 flatpak --user install flathub io.podman_desktop.PodmanDesktop -y
 flatpak --user install flathub com.brave.Browser -y
 flatpak --user install flathub com.google.Chrome -y
 flatpak --user install flathub io.gitlab.librewolf-community -y
-
-# Doom Emacs
-read -rp "Instalar Doom Emacs? (S/N): " DOOM
-if [[ $DOOM =~ ^[Ss]$ ]]; then
-    if [ -d ~/.emacs.d ]; then
-        rm -Rf ~/.emacs.d
-    fi
-    go install github.com/fatih/gomodifytags@latest
-    go install github.com/cweill/gotests/...@latest
-    go install github.com/x-motemen/gore/cmd/gore@latest
-    go install golang.org/x/tools/cmd/guru@latest
-    git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
-    ~/.emacs.d/bin/doom install
-    sleep 5
-    rm -rf ~/.doom.d
-fi
 
 # Tmux Plugin Manager
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
@@ -76,10 +59,10 @@ git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 # Anaconda
 read -rp "Instalar Anaconda3? (S/N): " ANA
 if [[ $ANA =~ ^[Ss]$ ]]; then
-    wget https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Linux-x86_64.sh
-    chmod +x Anaconda3-2024.10-1-Linux-x86_64.sh
-    ./Anaconda3-2024.10-1-Linux-x86_64.sh
-    rm Anaconda3-2024.10-1-Linux-x86_64.sh
+    wget https://repo.anaconda.com/archive/Anaconda3-2025.12-2-Linux-x86_64.sh
+    chmod +x Anaconda3-2025.12-2-Linux-x86_64.sh
+    ./Anaconda3-2025.12-2-Linux-x86_64.sh
+    rm Anaconda3-2025.12-2-Linux-x86_64.sh
 fi
 
 # Bash
@@ -92,6 +75,17 @@ if [ ! -d ~/.config/autostart ]; then
 fi
 cp /usr/share/applications/ulauncher.desktop ~/.config/autostart/
 
+# Tema Ulauncher
+mkdir -p ~/.config/ulauncher/user-themes
+git clone https://github.com/Raayib/WhiteSur-Dark-ulauncher.git ~/.config/ulauncher/user-themes/WhiteSur-Dark-ulauncher
+
+# Iconos WhiteSur Grey
+git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git
+cd WhiteSur-icon-theme || return
+./install.sh -t grey
+cd ..
+rm -rf WhiteSur-icon-theme
+
 # ZSH
 if [ ! -d ~/.local/share/zsh ]; then
     mkdir -p ~/.local/share/zsh
@@ -99,22 +93,53 @@ fi
 touch ~/.zshrc
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.local/share/zsh/powerlevel10k
 
+# LSPs, Linters. tools, etc
 go install golang.org/x/tools/gopls@latest
 go install golang.org/x/tools/cmd/goimports@latest
 go install github.com/go-delve/delve/cmd/dlv@latest
-cargo install taplo-cli --locked
-cargo install stylua
-sudo npm install -g neovim prettier bash-language-server vscode-langservers-extracted emmet-ls typescript typescript-language-server yaml-language-server live-server markdownlint markdownlint-cli dockerfile-language-server-nodejs stylelint js-beautify
-wget https://github.com/artempyanykh/marksman/releases/download/2023-12-09/marksman-linux-x64
+
+rustup component add rust-analyzer
+
+wget https://github.com/tamasfe/taplo/releases/download/0.10.0/taplo-linux-x86_64.gz
+gunzip taplo-linux-x86_64.gz
+chmod +x taplo-linux-x86_64
+mv taplo-linux-x86_64 "$HOME/.local/bin/taplo"
+
+wget https://github.com/JohnnyMorganz/StyLua/releases/download/v2.4.0/stylua-linux-x86_64.zip
+unzip stylua-linux-x86_64.zip -d "$HOME/.local/bin/"
+rm stylua-linux-x86_64.zip
+
+wget https://github.com/artempyanykh/marksman/releases/download/2026-02-08/marksman-linux-x64
 mv marksman-linux-x64 marksman
 chmod +x marksman
 mv marksman "$HOME/.local/bin/"
-cargo install --locked zellij
-curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
+
+sudo npm install -g neovim prettier bash-language-server vscode-langservers-extracted emmet-ls typescript typescript-language-server yaml-language-server live-server markdownlint markdownlint-cli dockerfile-language-server-nodejs stylelint js-beautify
+
+# ZelliJ
+wget https://github.com/zellij-org/zellij/releases/download/v0.43.1/zellij-x86_64-unknown-linux-musl.tar.gz
+tar -xvf zellij*.tar.gz
+chmod +x zellij
+rm zellij-x86_64-unknown-linux-musl.tar.gz
+mv zellij "$HOME/.local/bin/"
+
+# Atuin
+curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh -s -- --non-interactive
+
+# LazyVim
+read -rp "Instalar LazyVim? (S/N): " LVIM
+if [[ $LVIM =~ ^[Ss]$ ]]; then
+    git clone https://github.com/LazyVim/starter ~/.config/lnv
+    rm -rf ~/.config/lnv/.git
+    echo 'alias lnv="NVIM_APPNAME=lnv nvim"' >> ~/.zshrc
+fi
+
+# Zed Editor
+curl -f https://zed.dev/install.sh | sh
 
 # Nix Packages
 export NIXPKGS_ALLOW_UNFREE=1
-nix-channel --add https://nixos.org/channels/nixos-24.05 nixpkgs
+nix-channel --add https://nixos.org/channels/nixos-25.11 nixpkgs
 nix-channel --update
 nix-env -iA nixpkgs.pgadmin4
 nix-env -iA nixpkgs.mysql-workbench
