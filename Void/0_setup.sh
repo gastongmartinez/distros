@@ -23,7 +23,7 @@ xbps-install -y zsh-autosuggestions
 xbps-install -y zsh-syntax-highlighting
 xbps-install -y bash-completion
 xbps-install -y autojump
-xbps-install -y ShellCheck
+xbps-install -y shellcheck
 
 # Usuario
 read -rp "Crear usuario? (S/N): " USR
