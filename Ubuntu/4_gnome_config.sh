@@ -23,8 +23,7 @@ dconf write /org/gnome/shell/extensions/arcmenu/available-placement "[true, fals
 dconf write /org/gnome/mutter/overlay-key "'Super_R'"
 dconf write /org/gnome/shell/extensions/arcmenu/menu-hotkey "'Undefined'"
 dconf write /org/gnome/desktop/wm/keybindings/panel-main-menu "['Super_L']"
-dconf write /org/gnome/shell/extensions/arcmenu/menu-button-icon "'Distro_Icon'"
-dconf write /org/gnome/shell/extensions/arcmenu/distro-icon 5
+dconf write /org/gnome/shell/extensions/arcmenu/menu-button-icon "'resource:///org/gnome/shell/extensions/arcmenu/icons/scalable/actions/distro-ubuntu-symbolic.svg'"
 
 # Dash to dock
 dconf write /org/gnome/shell/extensions/dash-to-dock/extend-height false
