@@ -17,7 +17,7 @@ PAQUETES=(
     #### Gnome ####
     'gnome-tweaks'
     'gnome-feeds'
-    'chrome-gnome-shell'
+    'gnome-browser-connector'
     'gnome-shell-extension-manager'
     'gnome-shell-extensions'
     'gnome-commander'
@@ -45,13 +45,13 @@ PAQUETES=(
     'tealdeer'
     'lsd'
     'corectrl'
-    'p7zip'
+    '7zip'
     'unrar'
     'alacritty'
     'htop'
     'btop'
+    'lm-sensors'
     'lshw-gtk'
-    'powerline'
     'flameshot'
     'klavaro'
     'fd-find'
@@ -60,7 +60,6 @@ PAQUETES=(
     'qalculate-gtk'
     'calibre'
     'foliate'
-    'hunspell-es'
     'pandoc'
     'dconf-editor'
     'synaptic'
@@ -69,6 +68,7 @@ PAQUETES=(
     'gettext'
     'flatpak'
     'gnome-software-plugin-flatpak'
+    'dialog'
 
     #### Multimedia ####
     'mpv'
@@ -77,7 +77,6 @@ PAQUETES=(
 
     #### Codecs ####
     'x264'
-    'gstreamer1.0-plugins-bad'
     'gstreamer1.0-plugins-bad-apps'
     'lame'
 
@@ -124,7 +123,7 @@ PAQUETES=(
     'npm'
     'yarnpkg'
     'pcre2-utils'
-    'pcregrep'
+    'pcregrep' # Buscar 
     'apache2'
     'php'
     'libapache2-mod-php'
@@ -142,17 +141,17 @@ PAQUETES=(
     'fonts-crosextra-carlito'
     'ttf-mscorefonts-installer'
 
+    ### Virtualizacion ###
+    'virt-manager'
+    'ebtables'
+    'bridge-utils'
+
     ### Cockpit ###
     'cockpit'
     'cockpit-sosreport'
     'cockpit-machines'
     'cockpit-podman'
     'cockpit-files'
-
-    ### Virtualizacion ###
-    'virt-manager'
-    'ebtables'
-    'bridge-utils'
 )
  
 for PAQ in "${PAQUETES[@]}"; do
@@ -171,6 +170,7 @@ LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/re
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 tar xf lazygit.tar.gz lazygit
 install lazygit -D -t /usr/local/bin/
+rm -f lazygit*
 ################################################################################
 
 ############################### SNAPS ##########################################
