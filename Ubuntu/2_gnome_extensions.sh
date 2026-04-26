@@ -54,4 +54,4 @@ mv no-overview ~/.local/share/gnome-shell/extensions/no-overview@fthx
 
 sleep 2
 
-reboot
+sudo reboot

@@ -62,4 +62,4 @@ dconf write /org/gnome/desktop/interface/icon-theme "'WhiteSur-grey'"
 
 sleep 5
 
-reboot
+sudo reboot

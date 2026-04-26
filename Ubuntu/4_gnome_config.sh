@@ -64,4 +64,4 @@ dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings "['
 
 sleep 5
 
-reboot
+sudo reboot

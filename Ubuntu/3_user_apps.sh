@@ -121,5 +121,5 @@ sudo mysql_secure_installation
 
 sleep 5
 
-reboot
+sudo reboot
 
