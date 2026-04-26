@@ -7,12 +7,6 @@ if [ "$R_USER" -eq 0 ]; then
    exit 1
 fi
 
-if [ -z "$DISPLAY" ]; then
-    echo -e "Debe ejecutarse dentro del entorno grafico.\n"
-    echo "Saliendo..."
-    exit 2
-fi
-
 DIRE=$(pwd)
 # Arc Menu
 git clone https://gitlab.com/arcmenu/ArcMenu.git
