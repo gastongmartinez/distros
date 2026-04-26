@@ -44,8 +44,8 @@ rm -rf WhiteSur-cursors
 # Tema
 dconf write /org/gnome/shell/enabled-extensions "['arcmenu@arcmenu.com', 'blur-my-shell@aunetx', 'caffeine@patapon.info', 'systemd-manager@hardpixel.eu', 'Vitals@CoreCoding.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'ubuntu-dock@ubuntu.com', 'tiling-assistant@ubuntu.com', 'no-overview@fthx', 'user-theme@gnome-shell-extensions.gcampax.github.com']"
 dconf write /org/gnome/desktop/interface/color-scheme "'prefer-dark'"
-dconf write /org/gnome/desktop/interface/gtk-theme "'WhiteSur-Dark'"
-dconf write /org/gnome/shell/extensions/user-theme/name "'WhiteSur-Dark'"
+dconf write /org/gnome/desktop/interface/gtk-theme "'WhiteSur-Dark-grey'"
+dconf write /org/gnome/shell/extensions/user-theme/name "'WhiteSur-Dark-grey'"
 dconf write /org/gnome/desktop/interface/cursor-theme "'WhiteSur-cursors'"
 dconf write /org/gnome/desktop/interface/icon-theme "'WhiteSur-grey'"
 
