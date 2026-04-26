@@ -12,7 +12,6 @@ USER=$(grep "1000" /etc/passwd | awk -F : '{ print $1 }')
 ############################### Apps Generales ################################
 PAQUETES=(
     #### Powermanagement ####
-    'tlp'
     'powertop'
 
     #### Gnome ####
@@ -38,24 +37,21 @@ PAQUETES=(
     'thunar'
     'thunar-archive-plugin'
     'thunar-media-tags-plugin'
-    'vifm'
     'stow'
     'ripgrep'
     'autofs'
 
     #### Sistema ####
-    ###'tldr'
+    'tealdeer'
     'lsd'
     'corectrl'
     'p7zip'
     'unrar'
     'alacritty'
-    'kitty'
     'htop'
-    'bpytop'
+    'btop'
     'lshw-gtk'
     'powerline'
-    'emacs'
     'flameshot'
     'klavaro'
     'fd-find'
@@ -64,7 +60,7 @@ PAQUETES=(
     'qalculate-gtk'
     'calibre'
     'foliate'
-    'aspell-es'
+    'hunspell-es'
     'pandoc'
     'dconf-editor'
     'synaptic'
@@ -75,8 +71,6 @@ PAQUETES=(
     'gnome-software-plugin-flatpak'
 
     #### Multimedia ####
-    'vlc'
-    'python3-vlc'
     'mpv'
     'handbrake'
     'audacious'
@@ -135,7 +129,6 @@ PAQUETES=(
     'php'
     'libapache2-mod-php'
     'php-mysql'
-    'dotnet-sdk-8.0'
     'dotnet-sdk-10.0'
 
     #### Fuentes ####
@@ -154,6 +147,7 @@ PAQUETES=(
     'cockpit-sosreport'
     'cockpit-machines'
     'cockpit-podman'
+    'cockpit-files'
 
     ### Virtualizacion ###
     'virt-manager'
@@ -182,13 +176,11 @@ install lazygit -D -t /usr/local/bin/
 ############################### SNAPS ##########################################
 snap install brave
 snap install mysql-workbench-community
-snap install g4music
 snap install retroarch
 snap install anki-desktop
 snap install nvim --classic
 snap install code --classic
 snap install gitkraken --classic
-snap install blanket --edge
 snap install pycharm-community --classic
 snap install intellij-idea-community --classic
 snap install datagrip --classic
