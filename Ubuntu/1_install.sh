@@ -129,6 +129,7 @@ PAQUETES=(
     'libapache2-mod-php'
     'php-mysql'
     'dotnet-sdk-10.0'
+    'libglib2.0-dev'
 
     #### Fuentes ####
     'fonts-terminus'
